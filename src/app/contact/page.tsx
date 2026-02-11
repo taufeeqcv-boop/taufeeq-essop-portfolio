@@ -2,12 +2,14 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
+import { SITE_CONFIG } from "@/lib/site-config";
 
 const CONCERN_OPTIONS = [
   "Rehab Funding",
   "Debt",
   "Wealth Management",
-  "Stress",
+  "Recovery coaching",
+  "Other",
 ] as const;
 
 function ContactForm() {
@@ -18,7 +20,7 @@ function ContactForm() {
     const type = searchParams.get("type");
     if (type === "crisis") setPrimaryConcern("Rehab Funding");
     else if (type === "wealth") setPrimaryConcern("Wealth Management");
-    else if (type === "recovery") setPrimaryConcern("Stress");
+    else if (type === "recovery") setPrimaryConcern("Recovery coaching");
   }, [searchParams]);
 
   return (
@@ -34,7 +36,7 @@ function ContactForm() {
 
         <div className="mb-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-sm text-gray-700">
           <strong>Note:</strong> Financial Planning services are provided under
-          FSP License #[Insert Number]. Recovery Coaching services are
+          FSP License #{SITE_CONFIG.fspNumber}. Recovery Coaching services are
           supportive wellness interventions and do not constitute clinical
           psychological treatment. If you are in a medical emergency, please
           contact 10111.
@@ -44,7 +46,7 @@ function ContactForm() {
           name="contact"
           method="POST"
           data-netlify="true"
-          netlify-honeypot="bot-field"
+          data-netlify-honeypot="bot-field"
           action="/thank-you"
           className="space-y-6"
         >

@@ -10,6 +10,9 @@ export default function About() {
   return (
     <div className="min-h-screen bg-slate-50 pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4">
+        <p className="text-[#10b981] font-semibold uppercase tracking-wider text-sm mb-2">
+          Sovereign Architect · Dual Competency
+        </p>
         <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-8">
           The Intersection of Finance and Human Resilience
         </h1>
@@ -17,7 +20,8 @@ export default function About() {
         <div className="prose prose-lg text-gray-600 max-w-none">
           <p className="leading-relaxed mb-6">
             For over 7 years, I operated in the high-stakes world of corporate
-            finance, winning awards at Old Mutual and Sanlam. I was a
+            finance—League of Champions at Sanlam, Grand Prize winner, and
+            &ldquo;Best Sales Closer&rdquo; at Old Mutual. I was a
             &ldquo;Retention Architect,&rdquo; helping clients hold onto their
             assets.
           </p>
@@ -28,8 +32,9 @@ export default function About() {
           </p>
           <p className="leading-relaxed mb-6">
             Today, I hold a dual-competency profile rare in South Africa: I am a
-            Senior Financial Planner with a BCom in Tax, and a Certified
-            Practitioner in Addiction Counselling (ACCSA).
+            Senior Financial Planner with a BCom in Tax (UWC), and an ACCSA
+            Addiction Specialist in progress. I bridge corporate awards and
+            human recovery.
           </p>
           <p className="leading-relaxed mb-10">
             I don&apos;t just manage your portfolio. I help you manage the

@@ -1,9 +1,21 @@
 # 🚀 Deployment Checklist: Financial Recovery Architect
 
 ## 1. Final Content Polish
-- [ ] **FSP Number:** Check `src/components/Footer.tsx`. Replace `[Insert Number]` with your actual license.
+- [ ] **FSP Number:** Set in Netlify (see **Environment variables** below). No code change needed.
 - [ ] **Resume:** Ensure `Taufeeq_Essop_Resume_2026.pdf` is inside the `public/` folder.
 - [ ] **Logo:** Verify `public/logo.jpg` is loading correctly.
+
+## 1b. Environment Variables (Netlify)
+In **Netlify Dashboard** → your site → **Site configuration** → **Environment variables** → **Add a variable** → **Add a single variable**. Then **Trigger deploy** so changes apply.
+
+| Key | Value | Purpose |
+|-----|--------|--------|
+| `NEXT_PUBLIC_FSP_NUMBER` | Your FSCA license number | Shows in Footer, Contact, Services (Compliance Firewall) |
+| `NEXT_PUBLIC_SITE_URL` | `https://taufeeqessop.co.za` (or your Netlify URL) | SEO, canonical and Open Graph URL |
+
+**Optional (post-launch):**
+- `NEXT_PUBLIC_WHATSAPP_NUMBER` = `27810487447` (for a future WhatsApp widget)
+- `NEXT_PUBLIC_GA_ID` = your Google Analytics measurement ID
 
 ## 2. GitHub Push
 Run these commands in your terminal:

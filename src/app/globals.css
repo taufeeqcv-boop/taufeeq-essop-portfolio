@@ -22,3 +22,9 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Accessibility: visible focus for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-brand-green);
+  outline-offset: 2px;
+}

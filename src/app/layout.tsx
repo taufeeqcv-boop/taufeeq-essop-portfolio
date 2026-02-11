@@ -16,10 +16,16 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://taufeeqessop.co.za";
+
 export const metadata: Metadata = {
   title: "Taufeeq Essop | Financial Recovery Architect",
   description:
     "Specialized financial planning for addiction recovery. We help families secure funding for rehab through Medical Aid advocacy and Section 6B Tax strategies.",
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    url: siteUrl,
+  },
 };
 
 export default function RootLayout({

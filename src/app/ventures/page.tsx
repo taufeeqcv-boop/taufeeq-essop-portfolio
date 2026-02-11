@@ -11,23 +11,23 @@ const ventures = [
   {
     title: "Precision LGS",
     role: "Co-Founder",
-    desc: "Light Gauge Steel construction technology specializing in rapid 'Garden Cottage' deployment for rental income. Turn your backyard into income in 4 weeks.",
+    desc: "Light Gauge Steel (LGS) construction technology specializing in rapid Garden Cottage deployment for rental income. Turn your backyard into income in 4 weeks.",
     icon: <Hammer className="w-8 h-8 text-[#10b981]" />,
     color: "bg-slate-900",
   },
   {
-    title: "Al-Kimya",
-    role: "Founder",
-    desc: "Metabolic Psychiatry & Integrative Recovery. Combining ketogenic protocols with clinical therapy and somatic tools for relapse prevention.",
-    icon: <Activity className="w-8 h-8 text-blue-400" />,
-    color: "bg-blue-900",
-  },
-  {
     title: "Glengrove Lodge",
     role: "Owner",
-    desc: "Premium short-term rental and touring logistics. 'Little Explorers' tours for family travel. Airbnb Superhost.",
+    desc: "Premium short-term rental and hospitality. Little Explorers touring division for family travel. Airbnb Superhost.",
     icon: <Home className="w-8 h-8 text-orange-400" />,
     color: "bg-orange-900",
+  },
+  {
+    title: "Al-Kimya",
+    role: "Founder",
+    desc: "Metabolic psychiatry & integrative recovery. Combining ketogenic protocols with clinical therapy and somatic tools for relapse prevention.",
+    icon: <Activity className="w-8 h-8 text-blue-400" />,
+    color: "bg-blue-900",
   },
   {
     title: "Al-Ameen Caps",

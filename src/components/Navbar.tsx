@@ -44,6 +44,12 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
+          <Link
+            href="/"
+            className="text-gray-300 hover:text-[#10b981] transition-colors text-sm uppercase tracking-wider font-medium"
+          >
+            Home
+          </Link>
           {["About", "Services", "Ventures", "Resume"].map((item) => (
             <Link
               key={item}
@@ -75,11 +81,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-[#0f172a] absolute w-full px-4 pt-4 pb-8 shadow-xl border-t border-gray-800">
-          {["About", "Services", "Ventures", "Resume", "Contact"].map(
+          {["Home", "About", "Services", "Ventures", "Resume", "Contact"].map(
             (item) => (
               <Link
                 key={item}
-                href={`/${item.toLowerCase()}`}
+                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 onClick={() => setIsOpen(false)}
                 className="block py-3 text-gray-300 hover:text-white border-b border-gray-800"
               >

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { SITE_CONFIG } from "@/lib/site-config";
 
 export default function Footer() {
   return (
@@ -27,16 +28,16 @@ export default function Footer() {
           <h4 className="text-white font-bold mb-4">Legal & Compliance</h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link href="/privacy-policy" className="hover:text-[#10b981]">
+              <Link href="/privacy" className="hover:text-[#10b981]">
                 Privacy Policy (POPIA)
               </Link>
             </li>
             <li>
-              <Link href="/paia-manual" className="hover:text-[#10b981]">
+              <Link href="/paia" className="hover:text-[#10b981]">
                 PAIA Manual
               </Link>
             </li>
-            <li>FSP License # [Insert Number]</li>
+            <li>FSP License # {SITE_CONFIG.fspNumber}</li>
           </ul>
         </div>
 
