@@ -1,114 +1,77 @@
-import Hero from "@/components/Hero";
-import Link from "next/link";
-import { ArrowRight, Award, BookOpen, GraduationCap, Scale } from "lucide-react";
+"use client";
 
-export default function Home() {
+import { SITE_CONFIG } from "@/lib/config";
+import { getIcon } from "@/lib/icons";
+import BentoCard from "@/components/bento/BentoCard";
+import HeroCard from "@/components/bento/HeroCard";
+import CrisisCard from "@/components/bento/CrisisCard";
+import AccoladesCard from "@/components/bento/AccoladesCard";
+
+export default function HomePage() {
+  const ventures = SITE_CONFIG.ventures;
+  const crisisVenture = ventures.find((v) => "featured" in v && v.featured) ?? ventures[0];
+  const otherVentures = ventures.filter((v) => v.id !== crisisVenture.id);
+
   return (
-    <>
-      <Hero />
+    <main className="min-h-screen p-4 md:p-6 lg:p-8 max-w-7xl mx-auto overflow-x-hidden grid-lines page-vignette relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 relative z-10">
+        {/* Hero: Top-Left, spans 2 cols, 2 rows */}
+        <div className="order-1 lg:col-span-2 lg:row-span-2 lg:col-start-1 lg:row-start-1">
+          <HeroCard />
+        </div>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-[#64748b]">
-            <span className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-[#10b981]" />
-              FPI (CFP)
-            </span>
-            <span className="flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-[#10b981]" />
-              ACCSA
-            </span>
-            <span className="flex items-center gap-2">
-              <GraduationCap className="w-5 h-5 text-[#10b981]" />
-              UWC (BCom)
-            </span>
-            <span className="flex items-center gap-2">
-              <Scale className="w-5 h-5 text-[#10b981]" />
-              Commissioner of Oaths
-            </span>
+        {/* Crisis Interceptor: Top-Right (1 col, 1 row) */}
+        <div className="order-2 lg:col-start-3 lg:row-start-1">
+          <CrisisCard />
+        </div>
+
+        {/* Al-Kimya: Top-Far-Right (1 col, 1 row) */}
+        {otherVentures[0] && (
+          <div className="order-3 lg:col-start-4 lg:row-start-1">
+            <BentoCard
+              title={otherVentures[0].name}
+              description={otherVentures[0].description}
+              icon={getIcon(otherVentures[0].icon)}
+              href={otherVentures[0].link}
+              color={otherVentures[0].color}
+              index={0}
+            />
           </div>
-          <p className="text-lg text-gray-600 mb-6 italic max-w-2xl mx-auto">
-            &ldquo;Traditional financial advisors don&apos;t understand the chaos
-            of addiction. Traditional therapists don&apos;t understand the
-            complexity of tax and estate planning. I speak both languages.&rdquo;
-          </p>
-        </div>
-      </section>
+        )}
 
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#0f172a] mb-6">
-            The Intersection of Finance & Human Resilience
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            For over 7 years, I operated in the high-stakes world of corporate
-            finance, winning awards at Old Mutual and Sanlam. I was a
-            &ldquo;Retention Architect,&rdquo; helping clients hold onto their
-            assets. But I realized the biggest storm wasn&apos;t the
-            market—it was the human element.
-          </p>
-          <Link
-            href="/about"
-            className="inline-flex items-center text-[#0f172a] font-bold hover:text-[#10b981] transition-colors"
-          >
-            Read My Full Story <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
-        </div>
-      </section>
-
-      <section
-        id="toolkit"
-        className="py-16 bg-gray-100"
-        aria-labelledby="toolkit-heading"
-      >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-[#0f172a] rounded-3xl p-8 md:p-10 shadow-2xl overflow-hidden relative">
-            <div className="relative z-10 max-w-2xl">
-              <h2
-                id="toolkit-heading"
-                className="text-3xl font-serif font-bold text-white mb-4"
-              >
-                The Rehab Funding Toolkit
-              </h2>
-              <p className="text-gray-300 mb-6">
-                Don&apos;t liquidate your assets in a panic. Download my guide on
-                Section 6B Tax Deductions and Medical Aid Advocacy to fund
-                recovery intelligently.
-              </p>
-              <form
-                name="toolkit-download"
-                method="POST"
-                action="/thank-you"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                className="flex flex-col sm:flex-row gap-2"
-              >
-                <input type="hidden" name="form-name" value="toolkit-download" />
-                <p className="hidden">
-                  <label>
-                    Don&apos;t fill this out: <input name="bot-field" />
-                  </label>
-                </p>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email address"
-                  required
-                  className="px-4 py-3 rounded-lg w-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#10b981]"
-                  aria-label="Email address"
-                />
-                <button
-                  type="submit"
-                  className="bg-[#10b981] text-[#0f172a] px-6 py-3 rounded-lg font-bold hover:bg-white transition-colors whitespace-nowrap"
-                >
-                  Download Toolkit
-                </button>
-              </form>
-            </div>
-            <div className="hidden md:block absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-[#10b981]/20 to-transparent" />
+        {/* Precision LGS: Below Crisis (1 col, 1 row) */}
+        {otherVentures[1] && (
+          <div className="order-4 lg:col-start-3 lg:row-start-2">
+            <BentoCard
+              title={otherVentures[1].name}
+              description={otherVentures[1].description}
+              icon={getIcon(otherVentures[1].icon)}
+              href={otherVentures[1].link}
+              color={otherVentures[1].color}
+              index={1}
+            />
           </div>
+        )}
+
+        {/* Glengrove: Below Al-Kimya (1 col, 1 row) */}
+        {otherVentures[2] && (
+          <div className="order-5 lg:col-start-4 lg:row-start-2">
+            <BentoCard
+              title={otherVentures[2].name}
+              description={otherVentures[2].description}
+              icon={getIcon(otherVentures[2].icon)}
+              href={otherVentures[2].link}
+              color={otherVentures[2].color}
+              index={2}
+            />
+          </div>
+        )}
+
+        {/* Accolades: Bottom row, spans 2 cols */}
+        <div className="order-6 lg:col-start-1 lg:col-span-2 lg:row-start-3">
+          <AccoladesCard />
         </div>
-      </section>
-    </>
+      </div>
+    </main>
   );
 }

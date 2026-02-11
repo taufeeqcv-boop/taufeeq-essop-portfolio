@@ -1,31 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import TopBar from "@/components/TopBar";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-const inter = Inter({
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-mono",
 });
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://taufeeqessop.co.za";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://taufeeqessop.co.za";
 
 export const metadata: Metadata = {
   title: "Taufeeq Essop | Financial Recovery Architect",
   description:
-    "Specialized financial planning for addiction recovery. We help families secure funding for rehab through Medical Aid advocacy and Section 6B Tax strategies.",
+    "Rebuilding Wealth. Engineering Resilience. Bridging the gap between financial crisis and structural recovery.",
   metadataBase: new URL(siteUrl),
-  openGraph: {
-    url: siteUrl,
-  },
+  openGraph: { url: siteUrl },
 };
 
 export default function RootLayout({
@@ -34,15 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-slate-50 text-slate-900`}
+        className={`${inter.variable} ${jetbrainsMono.variable} bg-black text-zinc-100 antialiased font-sans`}
       >
-        <TopBar />
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
+        {children}
         <CookieConsent />
-        <Footer />
       </body>
     </html>
   );

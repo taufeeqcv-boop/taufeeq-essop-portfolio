@@ -1,30 +1,93 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+/* ===== The Architect's Terminal – Design System ===== */
+@layer base {
+  :root {
+    --background: 0 0% 0%; /* Pure Black */
+    --foreground: 0 0% 98%;
+    --card: 240 5.9% 10%; /* Zinc 900 #18181b */
+    --card-border: 240 3.7% 15.9%; /* Zinc 800 #27272a */
+    /* Legacy hex for components that reference them */
+    --background-hex: #000000;
+    --background-card: #18181b;
+    --border: #27272a;
+    --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    /* Venture glows (box-shadow) */
+    --glow-red: 0 0 20px -5px rgba(220, 38, 38, 0.3);
+    --glow-blue: 0 0 20px -5px rgba(59, 130, 246, 0.3);
+    --glow-emerald: 0 0 20px -5px rgba(16, 185, 129, 0.3);
+    --glow-amber: 0 0 20px -5px rgba(245, 158, 11, 0.3);
+  }
+
+  body {
+    @apply bg-black text-zinc-100 antialiased;
+    font-family: var(--font-inter);
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
-  /* Brand */
-  --color-brand-navy: #0f172a;
-  --color-brand-green: #10b981;
-  --color-brand-gold: #d4af37;
-  --color-brand-slate: #64748b;
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --font-sans: var(--font-inter);
+  --font-family-mono: var(--font-mono);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+@layer utilities {
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  /* Venture glows */
+  .glow-red {
+    box-shadow: 0 0 20px -5px rgba(220, 38, 38, 0.3);
+  }
+  .glow-blue {
+    box-shadow: 0 0 20px -5px rgba(59, 130, 246, 0.3);
+  }
+  .glow-emerald {
+    box-shadow: 0 0 20px -5px rgba(16, 185, 129, 0.3);
+  }
+  .glow-amber {
+    box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.3);
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Hover variants for venture glows */
+  .hover\:glow-red:hover {
+    box-shadow: 0 0 20px -5px rgba(220, 38, 38, 0.3);
+  }
+  .hover\:glow-blue:hover {
+    box-shadow: 0 0 20px -5px rgba(59, 130, 246, 0.3);
+  }
+  .hover\:glow-emerald:hover {
+    box-shadow: 0 0 20px -5px rgba(16, 185, 129, 0.3);
+  }
+  .hover\:glow-amber:hover {
+    box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.3);
+  }
 }
 
-/* Accessibility: visible focus for keyboard users */
+/* Subtle page vignette (terminal feel) */
+.page-vignette {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0, 0, 0, 0.4) 0%, transparent 70%);
+}
+
+/* Accessibility */
 :focus-visible {
-  outline: 2px solid var(--color-brand-green);
+  outline: 2px solid hsl(var(--card-border));
   outline-offset: 2px;
 }
