@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | Taufeeq Essop - Financial Recovery Architect",
   description:
-    "The Intersection of Finance and Human Resilience. BCom Tax, ACCSA Addiction Specialist, Old Mutual and Sanlam awards.",
+    "Rooted in Tradition, Innovating for the Future. Legacy of Tuan Guru and Sayed Abdurrahman Motura. Al-Kimya Origin, Glengrove Lodge, financial and substance recovery.",
 };
 
 export default function About() {
@@ -11,38 +11,68 @@ export default function About() {
     <div className="min-h-screen bg-slate-50 pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4">
         <p className="text-[#10b981] font-semibold uppercase tracking-wider text-sm mb-2">
-          Sovereign Architect · Dual Competency
+          Legacy & Leadership
         </p>
         <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-8">
-          The Intersection of Finance and Human Resilience
+          Rooted in Tradition, Innovating for the Future
         </h1>
 
-        <div className="prose prose-lg text-gray-600 max-w-none">
-          <p className="leading-relaxed mb-6">
+        {/* About Me – main bio */}
+        <section className="mb-12">
+          <h2 className="text-xl font-serif font-bold text-[#0f172a] mb-6 sr-only">
+            About Me
+          </h2>
+          <div className="prose prose-lg text-gray-600 max-w-none">
+            <p className="leading-relaxed mb-6">
+              I am Taufeeq Essop.
+            </p>
+            <p className="leading-relaxed mb-6">
+              My journey as an entrepreneur and counselor is not just a career
+              choice; it is a continuation of a legacy. I am a proud descendant
+              of the Cape&apos;s spiritual pioneers. Through my maternal
+              grandmother, Asia Rakiep, my lineage traces back to Tuan Guru—the
+              father of Islam in South Africa who wrote the Qur&apos;an from
+              memory while imprisoned on Robben Island. On my paternal side, I
+              carry the bloodline of Sayed Abdurrahman Motura, the great saint
+              of Robben Island, and the resilient spirit of District Six.
+            </p>
+            <p className="leading-relaxed mb-6">
+              This heritage defines my mission. I combine my Commerce degree and
+              ACCSA addiction counseling training with the spiritual discipline
+              of my forefathers.
+            </p>
+            <p className="leading-relaxed mb-10">
+              Whether I am developing the Al-Kimya Origin app to digitize
+              spiritual healing, welcoming guests to Glengrove Lodge, or guiding
+              individuals through financial and substance recovery, my goal
+              remains the same: to serve my community with the same dedication
+              as those who came before me. I bridge the gap between ancient
+              wisdom and modern necessity, helping you build a life of purpose,
+              health, and dignity.
+            </p>
+          </div>
+        </section>
+
+        <section className="pt-12 border-t border-gray-200">
+          <h2 className="text-2xl font-serif font-bold text-[#0f172a] mb-6">
+            The Intersection of Finance and Human Resilience
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
             For over 7 years, I operated in the high-stakes world of corporate
             finance—League of Champions at Sanlam, Grand Prize winner, and
             &ldquo;Best Sales Closer&rdquo; at Old Mutual. I was a
             &ldquo;Retention Architect,&rdquo; helping clients hold onto their
             assets.
           </p>
-          <p className="leading-relaxed mb-6">
-            But I realized the biggest storm wasn&apos;t the market—it was the
-            human element. Financial stress is a trigger for anxiety, burnout,
-            and addiction.
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Today, I hold a dual-competency profile rare in South Africa: a
+            Senior Financial Planner with a BCom in Tax (UWC), and ACCSA
+            addiction counseling training. I bridge corporate awards and
+            human recovery—whether you are a family funding a loved one&apos;s
+            recovery or an executive rebuilding after crisis, I am your
+            Financial Recovery Architect.
           </p>
-          <p className="leading-relaxed mb-6">
-            Today, I hold a dual-competency profile rare in South Africa: I am a
-            Senior Financial Planner with a BCom in Tax (UWC), and an ACCSA
-            Addiction Specialist in progress. I bridge corporate awards and
-            human recovery.
-          </p>
-          <p className="leading-relaxed mb-10">
-            I don&apos;t just manage your portfolio. I help you manage the
-            behaviors that threaten it. Whether you are a family funding a loved
-            one&apos;s recovery, or an executive fighting gambling debt, I am
-            your Financial Recovery Architect.
-          </p>
-        </div>
+        </section>
 
         <section className="mt-16 pt-12 border-t border-gray-200">
           <h2 className="text-2xl font-serif font-bold text-[#0f172a] mb-6">

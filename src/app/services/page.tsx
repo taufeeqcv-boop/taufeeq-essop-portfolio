@@ -23,12 +23,12 @@ export const metadata: Metadata = {
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-slate-50 pt-32 pb-20">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100/70 pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-4">
+        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-4 tracking-tight">
           Services
         </h1>
-        <p className="text-gray-600 mb-8 max-w-2xl">
+        <p className="text-gray-600 mb-8 max-w-2xl leading-relaxed">
           A clear separation between regulated financial advice and voluntary
           recovery coaching—so you know exactly what you&apos;re engaging with.
           Below: what I do, what I offer, how it helps, and how we can link and
@@ -36,7 +36,7 @@ export default function Services() {
         </p>
 
         {/* Services under Taufeeq Essop – umbrella */}
-        <section className="mb-10 p-6 rounded-2xl bg-emerald-50 border border-emerald-200">
+        <section className="mb-10 p-6 rounded-2xl bg-emerald-50 border border-emerald-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-emerald-300">
           <h2 className="text-lg font-bold text-[#0f172a] mb-2">
             Financial & Recovery Architect Services
           </h2>
@@ -46,7 +46,7 @@ export default function Services() {
         </section>
 
         {/* Giving back – free services */}
-        <section className="mb-10 p-6 rounded-2xl bg-amber-50 border border-amber-200">
+        <section className="mb-10 p-6 rounded-2xl bg-amber-50 border border-amber-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-amber-300">
           <h2 className="text-lg font-bold text-[#0f172a] mb-2">
             Giving Back – Free Financial & Recovery Support
           </h2>
@@ -55,8 +55,33 @@ export default function Services() {
           </p>
         </section>
 
+        {/* Taufeeq Essop Financial & Recovery Wellness – integrated practice */}
+        <section className="mb-12 p-8 rounded-2xl bg-[#0f172a] text-gray-200 border border-[#0f172a] shadow-lg shadow-slate-900/10 transition-all duration-300 hover:shadow-xl hover:shadow-slate-900/20">
+          <h2 className="text-xl font-bold text-white mb-2">
+            Taufeeq Essop Financial & Recovery Wellness
+          </h2>
+          <p className="text-sm text-emerald-300/90 font-medium mb-4">
+            Integrated Counseling & Financial Guidance
+          </p>
+          <p className="text-sm leading-relaxed mb-4">
+            This consultancy offers a dual-pronged approach to wellness, recognizing that financial stress and addiction are often deeply intertwined. Drawing on professional training through ACCSA (Addiction Counselor Certification Board of South Africa) and lived experience with financial restructuring, this practice offers compassionate, practical intervention.
+          </p>
+          <p className="text-sm leading-relaxed mb-6">
+            We break the cycle of despair by treating the person, not just the symptom. Whether it is navigating the complexities of debt review or beginning the journey of sobriety, we provide the strategic planning and emotional support needed to reclaim control of your life.
+          </p>
+          <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">
+            Services Offered
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-sm text-gray-200">
+            <li><strong className="text-white">Addiction Counseling:</strong> Professional support and intervention strategies based on ACCSA standards.</li>
+            <li><strong className="text-white">Financial Wellness Coaching:</strong> Practical guidance on budgeting, navigating debt review, and financial rehabilitation.</li>
+            <li><strong className="text-white">Family Intervention:</strong> Mediated sessions to help families support their loved ones effectively.</li>
+            <li><strong className="text-white">Metro North Early Intervention:</strong> Community-based support structures for early-stage recovery and assistance.</li>
+          </ul>
+        </section>
+
         {/* Business operations – what I do */}
-        <section className="mb-12 p-6 rounded-2xl bg-[#0f172a] text-gray-200 border border-[#0f172a]">
+        <section className="mb-12 p-6 rounded-2xl bg-[#0f172a] text-gray-200 border border-[#0f172a] shadow-lg shadow-slate-900/10 transition-all duration-300 hover:shadow-xl hover:shadow-slate-900/20">
           <h2 className="text-xl font-bold text-white mb-3">
             What I Do – Business Operations
           </h2>
@@ -67,7 +92,7 @@ export default function Services() {
 
         {/* Compliance firewall */}
         <section className="mb-12 space-y-6">
-          <div className="p-6 rounded-xl bg-[#0f172a] text-gray-200 border border-[#0f172a]">
+          <div className="p-6 rounded-xl bg-[#0f172a] text-gray-200 border border-[#0f172a] shadow-md transition-all duration-300 hover:shadow-lg">
             <h2 className="text-lg font-bold text-white mb-2">
               Financial Planning – Regulated by the FSCA
             </h2>
@@ -77,7 +102,7 @@ export default function Services() {
               {SITE_CONFIG.fspNumber}.
             </p>
           </div>
-          <div className="p-6 rounded-xl bg-amber-50/80 border border-amber-200">
+          <div className="p-6 rounded-xl bg-amber-50/80 border border-amber-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-amber-300">
             <h2 className="text-lg font-bold text-[#0f172a] mb-2">
               Recovery Coaching – Voluntary
             </h2>
@@ -91,7 +116,7 @@ export default function Services() {
         {/* Service pillars with detail + how to get involved + links */}
         <div className="space-y-12">
           {/* Crisis Interceptor */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm">
+          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
             <div className="flex items-center gap-3 mb-4">
               <ShieldAlert className="w-10 h-10 text-red-500" />
               <h2 className="text-2xl font-serif font-bold text-[#0f172a]">
@@ -120,7 +145,7 @@ export default function Services() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contact?type=crisis"
-                className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-red-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-red-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
               >
                 Initiate protocol
                 <ArrowRight className="w-4 h-4" />
@@ -129,7 +154,7 @@ export default function Services() {
           </article>
 
           {/* Wealth Management */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm">
+          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
             <div className="flex items-center gap-3 mb-4">
               <TrendingUp className="w-10 h-10 text-blue-600" />
               <h2 className="text-2xl font-serif font-bold text-[#0f172a]">
@@ -156,7 +181,7 @@ export default function Services() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contact?type=wealth"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
               >
                 Book a consultation
                 <ArrowRight className="w-4 h-4" />
@@ -165,7 +190,7 @@ export default function Services() {
           </article>
 
           {/* Recovery Coaching */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm">
+          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
             <div className="flex items-center gap-3 mb-4">
               <HeartHandshake className="w-10 h-10 text-[#10b981]" />
               <h2 className="text-2xl font-serif font-bold text-[#0f172a]">
@@ -192,7 +217,7 @@ export default function Services() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contact?type=recovery"
-                className="inline-flex items-center gap-2 bg-[#10b981] text-[#0f172a] px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-emerald-500 transition-colors"
+                className="inline-flex items-center gap-2 bg-[#10b981] text-[#0f172a] px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-emerald-500 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
               >
                 Start a conversation
                 <ArrowRight className="w-4 h-4" />
@@ -201,7 +226,7 @@ export default function Services() {
           </article>
 
           {/* Glengrove Lodge – detox when available */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm">
+          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
             <div className="flex items-center gap-3 mb-4">
               <HeartHandshake className="w-10 h-10 text-amber-500" />
               <h2 className="text-2xl font-serif font-bold text-[#0f172a]">
@@ -219,7 +244,7 @@ export default function Services() {
             </div>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-amber-600 text-white px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-amber-700 transition-colors"
+              className="inline-flex items-center gap-2 bg-amber-600 text-white px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-amber-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
             >
               Enquire about Glengrove
               <ArrowRight className="w-4 h-4" />
@@ -227,7 +252,7 @@ export default function Services() {
           </article>
 
           {/* Al-Kimya – partnership */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm">
+          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
             <h2 className="text-xl font-serif font-bold text-[#0f172a] mb-4">
               In Conjunction With Al-Kimya
             </h2>
@@ -236,7 +261,7 @@ export default function Services() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#27272a] text-white px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-zinc-700 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#27272a] text-white px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-zinc-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
             >
               Discuss collaboration
               <ArrowRight className="w-4 h-4" />
@@ -245,7 +270,7 @@ export default function Services() {
         </div>
 
         {/* Venture With Me – Rehabilitation Center */}
-        <section className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-emerald-900/90 to-[#0f172a] text-gray-200 border border-emerald-800/50">
+        <section className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-emerald-900/90 to-[#0f172a] text-gray-200 border border-emerald-800/50 shadow-xl shadow-emerald-900/20 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-900/30 hover:border-emerald-700/50">
           <div className="flex items-center gap-3 mb-4">
             <Building2 className="w-10 h-10 text-emerald-400" />
             <h2 className="text-2xl font-serif font-bold text-white">
@@ -260,7 +285,7 @@ export default function Services() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-emerald-500 text-[#0f172a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-emerald-400 transition-colors"
+            className="inline-flex items-center gap-2 bg-emerald-500 text-[#0f172a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-emerald-400 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
           >
             I want to venture – get in touch
             <ArrowRight className="w-4 h-4" />
@@ -268,7 +293,7 @@ export default function Services() {
         </section>
 
         {/* How to link with me – build business networks */}
-        <section className="mt-12 p-8 rounded-2xl bg-[#0f172a] text-gray-200 border border-[#0f172a]">
+        <section className="mt-12 p-8 rounded-2xl bg-[#0f172a] text-gray-200 border border-[#0f172a] shadow-xl shadow-slate-900/20 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-900/30">
           <div className="flex items-center gap-3 mb-4">
             <Handshake className="w-10 h-10 text-[#10b981]" />
             <h2 className="text-2xl font-serif font-bold text-white">
@@ -281,14 +306,14 @@ export default function Services() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-[#0f172a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-[#0f172a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
             >
               <Mail className="w-4 h-4" />
               Contact / Enquiry
             </Link>
             <Link
               href="/for-recruiters"
-              className="inline-flex items-center gap-2 bg-[#10b981] text-[#0f172a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-emerald-400 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#10b981] text-[#0f172a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-emerald-400 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
             >
               <Briefcase className="w-4 h-4" />
               For Recruiters
@@ -297,14 +322,14 @@ export default function Services() {
               href={SITE_CONFIG.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#27272a] text-white border border-[#27272a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-zinc-700 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#27272a] text-white border border-[#27272a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-zinc-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
             >
               <Linkedin className="w-4 h-4" />
               LinkedIn
             </a>
             <Link
               href="/resume"
-              className="inline-flex items-center gap-2 bg-[#27272a] text-white border border-[#27272a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-zinc-700 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#27272a] text-white border border-[#27272a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-zinc-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
             >
               <FileText className="w-4 h-4" />
               Resume / CV
@@ -316,7 +341,7 @@ export default function Services() {
         </section>
 
         {/* Disclaimer */}
-        <section className="mt-12 p-6 rounded-xl bg-slate-100 border border-slate-200">
+        <section className="mt-12 p-6 rounded-xl bg-slate-100 border border-slate-200 shadow-sm">
           <p className="text-sm text-gray-600 flex items-start gap-2">
             <Scale className="w-4 h-4 shrink-0 mt-0.5" />
             <span>

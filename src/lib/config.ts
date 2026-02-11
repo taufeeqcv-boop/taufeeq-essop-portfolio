@@ -35,12 +35,12 @@ export const SITE_CONFIG = {
       id: "crisis",
       name: "Crisis Interceptor",
       description:
-        "Emergency financial triage for distressed businesses. 90-day hemorrhage control.",
+        "Emergency financial triage. Intervene, place into care, financial recovery & aftercare.",
       type: "service",
-      link: "/contact",
+      link: "/crisis-interceptor",
       color: "red",
       icon: "ShieldAlert",
-      featured: true,
+      logo: "/logos/crisis-interceptor.png",
     },
     {
       id: "alkimya",
@@ -48,9 +48,10 @@ export const SITE_CONFIG = {
       description:
         "Wealth recovery & restructuring protocols. Turning lead into gold.",
       type: "venture",
-      link: "/ventures",
+      link: "/ventures#alkimya",
       color: "emerald",
       icon: "Briefcase",
+      logo: "/logos/al-kimya.png",
     },
     {
       id: "precision",
@@ -58,7 +59,7 @@ export const SITE_CONFIG = {
       description:
         "Light Gauge Steel construction. Building physical assets for long-term yield.",
       type: "venture",
-      link: "/ventures",
+      link: "/ventures#precision",
       color: "blue",
       icon: "Hammer",
       logo: "/logos/precision-lgs.png",
@@ -67,11 +68,23 @@ export const SITE_CONFIG = {
       id: "glengrove",
       name: "Glengrove",
       description:
-        "Hospitality management & asset utilization. Passive income architecture.",
+        "Authentic Cape Town hospitality & exploration. Lodge, tours, short-term rentals.",
       type: "venture",
-      link: "/ventures",
+      link: "/ventures#glengrove",
       color: "amber",
       icon: "Home",
+      logo: "/logos/glengrove.png",
+    },
+    {
+      id: "alameen",
+      name: "Al-Ameen Caps",
+      description:
+        "Premium Islamic headwear & Sunnah attire. Nationwide delivery, retail & wholesale.",
+      type: "venture",
+      link: "/ventures#alameen",
+      color: "violet",
+      icon: "ShoppingBag",
+      logo: "/logos/al-ameen-caps.png",
     },
   ],
 } as const;

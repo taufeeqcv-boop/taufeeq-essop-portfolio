@@ -1,18 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import type { LucideIcon } from "lucide-react";
 import type { VentureColor } from "@/lib/config";
 
-/* Color logic: Crisis Red-600, Construction Blue-500, Wealth Emerald-500, Hospitality Amber-500 */
+/* Color logic: Crisis Red, Construction Blue, Al-Kimya Emerald, Glengrove Amber, Al-Ameen Violet */
 const colorGradients: Record<VentureColor, string> = {
   red: "from-red-600/15 via-red-900/5 to-transparent",
   blue: "from-blue-500/15 via-blue-900/5 to-transparent",
   emerald: "from-emerald-500/15 via-emerald-900/5 to-transparent",
   amber: "from-amber-500/15 via-amber-900/5 to-transparent",
+  violet: "from-violet-500/15 via-violet-900/5 to-transparent",
 };
 
 const colorHoverBorder: Record<VentureColor, string> = {
@@ -20,6 +23,7 @@ const colorHoverBorder: Record<VentureColor, string> = {
   blue: "hover:border-blue-500",
   emerald: "hover:border-emerald-500",
   amber: "hover:border-amber-500",
+  violet: "hover:border-violet-500",
 };
 
 const colorHoverGlow: Record<VentureColor, string> = {
@@ -27,6 +31,7 @@ const colorHoverGlow: Record<VentureColor, string> = {
   blue: "hover:glow-blue",
   emerald: "hover:glow-emerald",
   amber: "hover:glow-amber",
+  violet: "hover:glow-violet",
 };
 
 export interface BentoCardProps {
@@ -59,6 +64,8 @@ export default function BentoCard({
   const glow = colorHoverGlow[color];
   const cardHref = website ?? href;
   const isExternal = Boolean(website);
+  const [logoFailed, setLogoFailed] = useState(false);
+  const showLogo = logo && !logoFailed;
 
   const cardClasses = twMerge(
     "relative overflow-hidden rounded-3xl border border-[length:1px] border-[#27272a] bg-[#18181b] p-6",
@@ -73,17 +80,21 @@ export default function BentoCard({
       <div
         className={clsx(
           "p-3 rounded-xl bg-[#27272a] text-zinc-300 mb-4 flex items-center justify-center shrink-0",
-          logo ? "h-14 w-20" : "w-14 h-14"
+          showLogo ? "h-24 w-32" : "w-24 h-24"
         )}
       >
-        {logo ? (
-            <img
-              src={logo}
-              alt=""
-              className="w-full h-full object-contain"
-            />
-          ) : (
-          <Icon className="w-6 h-6" />
+        {showLogo ? (
+          <Image
+            src={logo}
+            alt=""
+            width={128}
+            height={96}
+            className="w-full h-full object-contain"
+            onError={() => setLogoFailed(true)}
+            unoptimized
+          />
+        ) : (
+          <Icon className="w-12 h-12" />
         )}
       </div>
       <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>

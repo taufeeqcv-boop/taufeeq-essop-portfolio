@@ -11,7 +11,9 @@ export default function CookieConsent() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const consented = sessionStorage.getItem(CONSENT_KEY);
-    if (!consented) setShow(true);
+    if (!consented) {
+      queueMicrotask(() => setShow(true));
+    }
   }, []);
 
   const accept = () => {

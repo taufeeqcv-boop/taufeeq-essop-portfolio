@@ -1,22 +1,15 @@
 # Venture & service logos
 
-Place logo image files here and reference them in `src/lib/config.ts` (add `logo` and optionally `website` to each venture).
+Place logo image files here. They are already wired in `src/lib/config.ts` for Crisis Interceptor, Al-Kimya, Precision LGS, and Glengrove. **As soon as you add the files below, they will appear on the site** (home Bento cards and Ventures page). Logos display large (e.g. 96×128px area on cards).
 
-## Expected filenames (labels)
+## Required filenames (already in config)
 
-| Business / service       | Suggested filename(s)     |
-|--------------------------|---------------------------|
-| Crisis Interceptor       | `crisis-interceptor.png` or `.svg` |
-| Al-Kimya Recovery        | `al-kimya.png`            |
-| Precision LGS            | `precision-lgs.png`        |
-| Glengrove                | `glengrove.png`           |
-| Recovery Architect       | `recovery-architect.png`   |
-| Financial Architect      | `financial-architect.png`  |
-| Al-Ameen Caps            | `al-ameen-caps.png`       |
+| Business / service | Filename to add |
+|--------------------|-----------------|
+| Crisis Interceptor | `crisis-interceptor.png` |
+| Al-Kimya Recovery  | `al-kimya.png` |
+| Precision LGS      | `precision-lgs.png` ✓ (already present) |
+| Glengrove          | `glengrove.png` |
+| Al-Ameen Caps      | `al-ameen-caps.png` |
 
-Use PNG or SVG. Keep aspect ratio consistent; the site displays logos in a uniform size (e.g. 48×48px container with `object-contain`).
-
-In `config.ts`, set for each venture, for example:
-
-- `logo: "/logos/glengrove.png"`
-- `website: "https://..."` (optional external link)
+Use PNG or SVG. If a file is missing, the site shows the fallback icon for that venture. Once you drop in the file with the exact name above, the logo will appear automatically.

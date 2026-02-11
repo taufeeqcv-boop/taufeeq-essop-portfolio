@@ -4,13 +4,13 @@ import { SITE_CONFIG, type VentureWithMedia } from "@/lib/config";
 import { getIcon } from "@/lib/icons";
 import BentoCard from "@/components/bento/BentoCard";
 import HeroCard from "@/components/bento/HeroCard";
-import CrisisCard from "@/components/bento/CrisisCard";
 import AccoladesCard from "@/components/bento/AccoladesCard";
+
+const BENTO_ORDER: (typeof SITE_CONFIG.ventures)[number]["id"][] = ["alkimya", "precision", "crisis", "glengrove"];
 
 export default function HomePage() {
   const ventures = SITE_CONFIG.ventures;
-  const crisisVenture = ventures.find((v) => "featured" in v && v.featured) ?? ventures[0];
-  const otherVentures = ventures.filter((v) => v.id !== crisisVenture.id);
+  const bentoVentures = BENTO_ORDER.map((id) => ventures.find((v) => v.id === id)).filter(Boolean);
 
   return (
     <main className="min-h-screen p-4 md:p-6 lg:p-8 max-w-7xl mx-auto overflow-x-hidden grid-lines page-vignette relative">
@@ -20,55 +20,66 @@ export default function HomePage() {
           <HeroCard />
         </div>
 
-        {/* Crisis Interceptor: Top-Right (1 col, 1 row) */}
-        <div className="order-2 lg:col-start-3 lg:row-start-1 min-h-[220px] flex flex-col">
-          <CrisisCard />
-        </div>
+        {/* Al-Kimya: Top-Right */}
+        {bentoVentures[0] && (
+          <div className="order-2 lg:col-start-3 lg:row-start-1 min-h-[220px] flex flex-col">
+            <BentoCard
+              title={bentoVentures[0].name}
+              description={bentoVentures[0].description}
+              icon={getIcon(bentoVentures[0].icon)}
+              href={bentoVentures[0].link}
+              color={bentoVentures[0].color}
+              index={0}
+              logo={(bentoVentures[0] as VentureWithMedia).logo}
+              website={(bentoVentures[0] as VentureWithMedia).website}
+            />
+          </div>
+        )}
 
-        {/* Al-Kimya: Top-Far-Right (1 col, 1 row) */}
-        {otherVentures[0] && (
+        {/* Precision LGS: Top-Far-Right */}
+        {bentoVentures[1] && (
           <div className="order-3 lg:col-start-4 lg:row-start-1 min-h-[220px] flex flex-col">
             <BentoCard
-              title={otherVentures[0].name}
-              description={otherVentures[0].description}
-              icon={getIcon(otherVentures[0].icon)}
-              href={otherVentures[0].link}
-              color={otherVentures[0].color}
-              index={0}
-              logo={(otherVentures[0] as VentureWithMedia).logo}
-              website={(otherVentures[0] as VentureWithMedia).website}
+              title={bentoVentures[1].name}
+              description={bentoVentures[1].description}
+              icon={getIcon(bentoVentures[1].icon)}
+              href={bentoVentures[1].link}
+              color={bentoVentures[1].color}
+              index={1}
+              logo={(bentoVentures[1] as VentureWithMedia).logo}
+              website={(bentoVentures[1] as VentureWithMedia).website}
             />
           </div>
         )}
 
-        {/* Precision LGS: Below Crisis (1 col, 1 row) */}
-        {otherVentures[1] && (
+        {/* Crisis Interceptor: Bottom-Left of right column */}
+        {bentoVentures[2] && (
           <div className="order-4 lg:col-start-3 lg:row-start-2 min-h-[220px] flex flex-col">
             <BentoCard
-              title={otherVentures[1].name}
-              description={otherVentures[1].description}
-              icon={getIcon(otherVentures[1].icon)}
-              href={otherVentures[1].link}
-              color={otherVentures[1].color}
-              index={1}
-              logo={(otherVentures[1] as VentureWithMedia).logo}
-              website={(otherVentures[1] as VentureWithMedia).website}
+              title={bentoVentures[2].name}
+              description={bentoVentures[2].description}
+              icon={getIcon(bentoVentures[2].icon)}
+              href={bentoVentures[2].link}
+              color={bentoVentures[2].color}
+              index={2}
+              logo={(bentoVentures[2] as VentureWithMedia).logo}
+              website={(bentoVentures[2] as VentureWithMedia).website}
             />
           </div>
         )}
 
-        {/* Glengrove: Below Al-Kimya (1 col, 1 row) */}
-        {otherVentures[2] && (
+        {/* Glengrove: Bottom-Right */}
+        {bentoVentures[3] && (
           <div className="order-5 lg:col-start-4 lg:row-start-2 min-h-[220px] flex flex-col">
             <BentoCard
-              title={otherVentures[2].name}
-              description={otherVentures[2].description}
-              icon={getIcon(otherVentures[2].icon)}
-              href={otherVentures[2].link}
-              color={otherVentures[2].color}
-              index={2}
-              logo={(otherVentures[2] as VentureWithMedia).logo}
-              website={(otherVentures[2] as VentureWithMedia).website}
+              title={bentoVentures[3].name}
+              description={bentoVentures[3].description}
+              icon={getIcon(bentoVentures[3].icon)}
+              href={bentoVentures[3].link}
+              color={bentoVentures[3].color}
+              index={3}
+              logo={(bentoVentures[3] as VentureWithMedia).logo}
+              website={(bentoVentures[3] as VentureWithMedia).website}
             />
           </div>
         )}

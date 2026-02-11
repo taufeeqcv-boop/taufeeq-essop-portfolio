@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 const CONCERN_OPTIONS = [
@@ -12,37 +12,18 @@ const CONCERN_OPTIONS = [
   "Other",
 ] as const;
 
-function ContactForm() {
-  const searchParams = useSearchParams();
-  const [primaryConcern, setPrimaryConcern] = useState("");
+function concernFromType(type: string | null): string {
+  if (type === "crisis") return "Rehab Funding";
+  if (type === "wealth") return "Wealth Management";
+  if (type === "recovery") return "Recovery coaching";
+  return "";
+}
 
-  useEffect(() => {
-    const type = searchParams.get("type");
-    if (type === "crisis") setPrimaryConcern("Rehab Funding");
-    else if (type === "wealth") setPrimaryConcern("Wealth Management");
-    else if (type === "recovery") setPrimaryConcern("Recovery coaching");
-  }, [searchParams]);
+function ContactFormInner({ initialConcern }: { initialConcern: string }) {
+  const [primaryConcern, setPrimaryConcern] = useState(initialConcern);
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-32 pb-20">
-      <div className="max-w-xl mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-2">
-          Let&apos;s Build Your Recovery Roadmap
-        </h1>
-        <p className="text-gray-600 mb-8">
-          Tell me your primary concern and I&apos;ll get back to you
-          confidentially.
-        </p>
-
-        <div className="mb-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-sm text-gray-700">
-          <strong>Note:</strong> Financial Planning services are provided under
-          FSP License #{SITE_CONFIG.fspNumber}. Recovery Coaching services are
-          supportive wellness interventions and do not constitute clinical
-          psychological treatment. If you are in a medical emergency, please
-          contact 10111.
-        </div>
-
-        <form
+    <form
           name="contact"
           method="POST"
           data-netlify="true"
@@ -138,6 +119,34 @@ function ContactForm() {
             Send Message
           </button>
         </form>
+  );
+}
+
+function ContactForm() {
+  const searchParams = useSearchParams();
+  const typeFromUrl = searchParams.get("type");
+  const initialConcern = concernFromType(typeFromUrl);
+
+  return (
+    <div className="min-h-screen bg-slate-50 pt-32 pb-20">
+      <div className="max-w-xl mx-auto px-4">
+        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-2">
+          Let&apos;s Build Your Recovery Roadmap
+        </h1>
+        <p className="text-gray-600 mb-8">
+          Tell me your primary concern and I&apos;ll get back to you
+          confidentially.
+        </p>
+
+        <div className="mb-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-sm text-gray-700">
+          <strong>Note:</strong> Financial Planning services are provided under
+          FSP License #{SITE_CONFIG.fspNumber}. Recovery Coaching services are
+          supportive wellness interventions and do not constitute clinical
+          psychological treatment. If you are in a medical emergency, please
+          contact 10111.
+        </div>
+
+        <ContactFormInner key={typeFromUrl ?? "default"} initialConcern={initialConcern} />
       </div>
     </div>
   );

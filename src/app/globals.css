@@ -18,6 +18,7 @@
     --glow-blue: 0 0 20px -5px rgba(59, 130, 246, 0.3);
     --glow-emerald: 0 0 20px -5px rgba(16, 185, 129, 0.3);
     --glow-amber: 0 0 20px -5px rgba(245, 158, 11, 0.3);
+    --glow-violet: 0 0 20px -5px rgba(139, 92, 246, 0.3);
   }
 
   body {
@@ -56,6 +57,9 @@
   .glow-amber {
     box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.3);
   }
+  .glow-violet {
+    box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.3);
+  }
 
   .grid-lines {
     background-image:
@@ -77,6 +81,9 @@
   .hover\:glow-amber:hover {
     box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.3);
   }
+  .hover\:glow-violet:hover {
+    box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.3);
+  }
 }
 
 /* Subtle page vignette (terminal feel) */
@@ -86,8 +93,14 @@
     radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0, 0, 0, 0.4) 0%, transparent 70%);
 }
 
-/* Accessibility */
+/* Accessibility & high-def interaction */
 :focus-visible {
   outline: 2px solid hsl(var(--card-border));
   outline-offset: 2px;
+}
+
+/* Optional: focus ring for buttons/links (softer than outline) */
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--card-border));
 }

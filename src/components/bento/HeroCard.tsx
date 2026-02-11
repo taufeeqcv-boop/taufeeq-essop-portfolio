@@ -14,7 +14,7 @@ export default function HeroCard() {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="flex flex-col justify-between rounded-3xl border border-[length:1px] border-[#27272a] bg-[#18181b] p-6 md:p-8 transition-all duration-300 hover:border-zinc-600 hover:-translate-y-1"
+      className="flex flex-col justify-between rounded-3xl border border-[length:1px] border-[#27272a] bg-[#18181b] p-6 md:p-8 transition-all duration-300 hover:border-zinc-600 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30"
     >
       <div>
         <p className="text-zinc-500 text-sm font-mono uppercase tracking-wider mb-3">
