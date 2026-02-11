@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Taufeeq Essop - Financial Recovery Architect
 
-## Getting Started
+This is the official digital headquarters for **Taufeeq Essop**, a multi-disciplinary practitioner bridging the gap between Wealth Management and Addiction Recovery.
 
-First, run the development server:
+## 🚀 Project Overview
+This platform serves as a "Triage Center" for clients, routing them through three distinct pathways:
+1. **Crisis Interceptor:** Immediate funding strategies for rehab (Medical Aid & Tax).
+2. **Wealth Management:** Traditional estate and risk planning for high-net-worth individuals.
+3. **Recovery Coaching:** Behavioral solvency and "Sober Budgeting."
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Tech Stack
+* **Framework:** Next.js 14 (App Router)
+* **Styling:** Tailwind CSS
+* **Animations:** Framer Motion
+* **Forms:** Netlify Forms (Stateful & Ghost implementation)
+* **Deployment:** Netlify
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Key Features
+* **Compliance Firewall:** Strict separation of Regulated Advice (FAIS) vs. Unregulated Coaching.
+* **Lead Magnets:** Integrated "Rehab Funding Toolkit" download funnel.
+* **Responsive Design:** Mobile-first architecture with glass-morphism UI.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚠️ Assets
+* Resume and Toolkits are located in `/public`.
+* Forms are detected via `public/__forms.html` for Netlify bots.

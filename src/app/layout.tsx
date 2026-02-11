@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Taufeeq Essop | Financial Recovery Architect",
   description:
-    "Bridging the gap between regulated financial advice and addiction recovery. Secure Your Wealth. Sustain Your Recovery.",
+    "Specialized financial planning for addiction recovery. We help families secure funding for rehab through Medical Aid advocacy and Section 6B Tax strategies.",
 };
 
 export default function RootLayout({
