@@ -18,7 +18,7 @@ export const SITE_CONFIG = {
   /** LinkedIn profile URL (used in Bento hero). Set NEXT_PUBLIC_LINKEDIN_URL. */
   linkedinUrl:
     process.env.NEXT_PUBLIC_LINKEDIN_URL ??
-    "https://www.linkedin.com/in/taufeeqessop",
+    "https://www.linkedin.com/in/taufeeq-essop-927911103",
   /** Contact email used in mailto links across the site. */
   contactEmail: "contact@taufeeqessop.co.za",
 };

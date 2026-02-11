@@ -61,6 +61,7 @@ export const SITE_CONFIG = {
       link: "/ventures",
       color: "blue",
       icon: "Hammer",
+      logo: "/logos/precision-lgs.png",
     },
     {
       id: "glengrove",
@@ -77,3 +78,9 @@ export const SITE_CONFIG = {
 
 export type VentureColor = (typeof SITE_CONFIG.ventures)[number]["color"];
 export type VentureIconName = (typeof SITE_CONFIG.ventures)[number]["icon"];
+
+/** Venture with optional logo image path and external website URL. */
+export type VentureWithMedia = (typeof SITE_CONFIG.ventures)[number] & {
+  logo?: string;
+  website?: string;
+};

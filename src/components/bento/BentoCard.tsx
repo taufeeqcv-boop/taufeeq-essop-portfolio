@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -37,6 +38,10 @@ export interface BentoCardProps {
   href?: string;
   color?: VentureColor;
   index?: number;
+  /** Path under public/ (e.g. /logos/glengrove.png). When set, shown instead of icon. */
+  logo?: string;
+  /** External URL; when set, card links here (opens in new tab) instead of href. */
+  website?: string;
 }
 
 export default function BentoCard({
@@ -47,10 +52,15 @@ export default function BentoCard({
   href,
   color = "emerald",
   index = 0,
+  logo,
+  website,
 }: BentoCardProps) {
   const gradient = colorGradients[color];
   const hoverBorder = colorHoverBorder[color];
   const glow = colorHoverGlow[color];
+  const cardHref = website ?? href;
+  const isExternal = Boolean(website);
+
   const content = (
     <>
       <div
@@ -61,8 +71,18 @@ export default function BentoCard({
         aria-hidden
       />
       <div className="relative z-10 flex flex-col h-full">
-        <div className="p-3 w-fit rounded-xl bg-[#27272a] text-zinc-300 mb-4">
-          <Icon className="w-6 h-6" />
+        <div className="p-3 w-fit rounded-xl bg-[#27272a] text-zinc-300 mb-4 flex items-center justify-center w-14 h-14">
+          {logo ? (
+            <Image
+              src={logo}
+              alt=""
+              width={56}
+              height={56}
+              className="w-full h-full object-contain"
+            />
+          ) : (
+            <Icon className="w-6 h-6" />
+          )}
         </div>
         <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
         <p className="text-sm text-zinc-400 leading-relaxed flex-1">
@@ -86,10 +106,21 @@ export default function BentoCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.05 + index * 0.05, ease: "easeOut" }}
     >
-      {href ? (
-        <Link href={href} className={cardClasses}>
-          {content}
-        </Link>
+      {cardHref ? (
+        isExternal ? (
+          <a
+            href={cardHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cardClasses}
+          >
+            {content}
+          </a>
+        ) : (
+          <Link href={cardHref} className={cardClasses}>
+            {content}
+          </Link>
+        )
       ) : (
         <div className={cardClasses}>{content}</div>
       )}

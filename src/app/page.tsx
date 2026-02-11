@@ -1,6 +1,6 @@
 "use client";
 
-import { SITE_CONFIG } from "@/lib/config";
+import { SITE_CONFIG, type VentureWithMedia } from "@/lib/config";
 import { getIcon } from "@/lib/icons";
 import BentoCard from "@/components/bento/BentoCard";
 import HeroCard from "@/components/bento/HeroCard";
@@ -35,6 +35,8 @@ export default function HomePage() {
               href={otherVentures[0].link}
               color={otherVentures[0].color}
               index={0}
+              logo={(otherVentures[0] as VentureWithMedia).logo}
+              website={(otherVentures[0] as VentureWithMedia).website}
             />
           </div>
         )}
@@ -49,6 +51,8 @@ export default function HomePage() {
               href={otherVentures[1].link}
               color={otherVentures[1].color}
               index={1}
+              logo={(otherVentures[1] as VentureWithMedia).logo}
+              website={(otherVentures[1] as VentureWithMedia).website}
             />
           </div>
         )}
@@ -63,6 +67,8 @@ export default function HomePage() {
               href={otherVentures[2].link}
               color={otherVentures[2].color}
               index={2}
+              logo={(otherVentures[2] as VentureWithMedia).logo}
+              website={(otherVentures[2] as VentureWithMedia).website}
             />
           </div>
         )}
