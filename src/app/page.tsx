@@ -21,13 +21,13 @@ export default function HomePage() {
         </div>
 
         {/* Crisis Interceptor: Top-Right (1 col, 1 row) */}
-        <div className="order-2 lg:col-start-3 lg:row-start-1">
+        <div className="order-2 lg:col-start-3 lg:row-start-1 min-h-[220px] flex flex-col">
           <CrisisCard />
         </div>
 
         {/* Al-Kimya: Top-Far-Right (1 col, 1 row) */}
         {otherVentures[0] && (
-          <div className="order-3 lg:col-start-4 lg:row-start-1">
+          <div className="order-3 lg:col-start-4 lg:row-start-1 min-h-[220px] flex flex-col">
             <BentoCard
               title={otherVentures[0].name}
               description={otherVentures[0].description}
@@ -43,7 +43,7 @@ export default function HomePage() {
 
         {/* Precision LGS: Below Crisis (1 col, 1 row) */}
         {otherVentures[1] && (
-          <div className="order-4 lg:col-start-3 lg:row-start-2">
+          <div className="order-4 lg:col-start-3 lg:row-start-2 min-h-[220px] flex flex-col">
             <BentoCard
               title={otherVentures[1].name}
               description={otherVentures[1].description}
@@ -59,7 +59,7 @@ export default function HomePage() {
 
         {/* Glengrove: Below Al-Kimya (1 col, 1 row) */}
         {otherVentures[2] && (
-          <div className="order-5 lg:col-start-4 lg:row-start-2">
+          <div className="order-5 lg:col-start-4 lg:row-start-2 min-h-[220px] flex flex-col">
             <BentoCard
               title={otherVentures[2].name}
               description={otherVentures[2].description}

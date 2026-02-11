@@ -50,10 +50,10 @@ export default function Navbar() {
           >
             Home
           </Link>
-          {["About", "Services", "Ventures", "Resume"].map((item) => (
+          {["About", "Services", "Ventures", "Resume", "For Recruiters"].map((item) => (
             <Link
               key={item}
-              href={`/${item.toLowerCase()}`}
+              href={item === "For Recruiters" ? "/for-recruiters" : `/${item.toLowerCase()}`}
               className="text-gray-300 hover:text-[#10b981] transition-colors text-sm uppercase tracking-wider font-medium"
             >
               {item}
@@ -81,11 +81,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-[#0f172a] absolute w-full px-4 pt-4 pb-8 shadow-xl border-t border-gray-800">
-          {["Home", "About", "Services", "Ventures", "Resume", "Contact"].map(
+          {["Home", "About", "Services", "Ventures", "Resume", "For Recruiters", "Contact"].map(
             (item) => (
               <Link
                 key={item}
-                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                href={item === "Home" ? "/" : item === "For Recruiters" ? "/for-recruiters" : `/${item.toLowerCase()}`}
                 onClick={() => setIsOpen(false)}
                 className="block py-3 text-gray-300 hover:text-white border-b border-gray-800"
               >

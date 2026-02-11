@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -61,6 +60,39 @@ export default function BentoCard({
   const cardHref = website ?? href;
   const isExternal = Boolean(website);
 
+  const cardClasses = twMerge(
+    "relative overflow-hidden rounded-3xl border border-[length:1px] border-[#27272a] bg-[#18181b] p-6",
+    "transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]",
+    hoverBorder,
+    glow,
+    className
+  );
+
+  const cardInner = (
+    <>
+      <div
+        className={clsx(
+          "p-3 rounded-xl bg-[#27272a] text-zinc-300 mb-4 flex items-center justify-center shrink-0",
+          logo ? "h-14 w-20" : "w-14 h-14"
+        )}
+      >
+        {logo ? (
+            <img
+              src={logo}
+              alt=""
+              className="w-full h-full object-contain"
+            />
+          ) : (
+          <Icon className="w-6 h-6" />
+        )}
+      </div>
+      <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+      <p className="text-sm text-zinc-400 leading-relaxed flex-1">
+        {description}
+      </p>
+    </>
+  );
+
   const content = (
     <>
       <div
@@ -71,37 +103,14 @@ export default function BentoCard({
         aria-hidden
       />
       <div className="relative z-10 flex flex-col h-full">
-        <div className="p-3 w-fit rounded-xl bg-[#27272a] text-zinc-300 mb-4 flex items-center justify-center w-14 h-14">
-          {logo ? (
-            <Image
-              src={logo}
-              alt=""
-              width={56}
-              height={56}
-              className="w-full h-full object-contain"
-            />
-          ) : (
-            <Icon className="w-6 h-6" />
-          )}
-        </div>
-        <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
-        <p className="text-sm text-zinc-400 leading-relaxed flex-1">
-          {description}
-        </p>
+        {cardInner}
       </div>
     </>
   );
 
-  const cardClasses = twMerge(
-    "relative overflow-hidden rounded-3xl border border-[length:1px] border-[#27272a] bg-[#18181b] p-6",
-    "transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]",
-    hoverBorder,
-    glow,
-    className
-  );
-
   const motionWrapper = (
     <motion.div
+      className="h-full flex flex-col min-h-0"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.05 + index * 0.05, ease: "easeOut" }}
@@ -112,17 +121,17 @@ export default function BentoCard({
             href={cardHref}
             target="_blank"
             rel="noopener noreferrer"
-            className={cardClasses}
+            className={twMerge(cardClasses, "h-full flex flex-col")}
           >
             {content}
           </a>
         ) : (
-          <Link href={cardHref} className={cardClasses}>
+          <Link href={cardHref} className={twMerge(cardClasses, "h-full flex flex-col")}>
             {content}
           </Link>
         )
       ) : (
-        <div className={cardClasses}>{content}</div>
+        <div className={twMerge(cardClasses, "h-full flex flex-col")}>{content}</div>
       )}
     </motion.div>
   );

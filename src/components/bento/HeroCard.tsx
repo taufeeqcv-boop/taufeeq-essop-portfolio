@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, FileText } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/config";
 
 const p = SITE_CONFIG.profile;
@@ -51,6 +51,13 @@ export default function HeroCard() {
         >
           <Mail className="w-4 h-4" />
           Get in Touch
+        </Link>
+        <Link
+          href="/resume"
+          className="inline-flex items-center gap-2 bg-[#27272a] text-white border border-[length:1px] border-[#27272a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-zinc-700 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-200"
+        >
+          <FileText className="w-4 h-4" />
+          Resume / CV
         </Link>
         <a
           href={p.linkedin}

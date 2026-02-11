@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { SITE_CONFIG, type VentureWithMedia } from "@/lib/config";
 import { getIcon } from "@/lib/icons";
@@ -17,8 +16,6 @@ const colorToBg: Record<(typeof SITE_CONFIG.ventures)[number]["color"], string> 
   emerald: "bg-emerald-900",
   amber: "bg-amber-900",
 };
-
-const LOGO_SIZE = 56;
 
 export default function Ventures() {
   const ventures = SITE_CONFIG.ventures.filter(
@@ -47,11 +44,9 @@ export default function Ventures() {
               >
                 <div className="mb-6 bg-white/10 w-14 h-14 flex items-center justify-center p-3 rounded-xl shrink-0">
                   {v.logo ? (
-                    <Image
+                    <img
                       src={v.logo}
                       alt=""
-                      width={LOGO_SIZE}
-                      height={LOGO_SIZE}
                       className="w-full h-full object-contain"
                     />
                   ) : (
