@@ -10,11 +10,11 @@ export default function Footer() {
         <div className="col-span-1 md:col-span-2">
           <div className="bg-white p-3 rounded-lg w-fit mb-6 inline-block">
             <Image
-              src="/logo.jpg"
-              alt="Taufeeq Essop Logo"
-              width={180}
-              height={50}
-              className="h-12 w-auto object-contain mix-blend-multiply"
+              src="/logo-financial-recovery-architect.png"
+              alt="Taufeeq Essop - Financial Recovery Architect"
+              width={220}
+              height={80}
+              className="h-12 w-auto object-contain"
             />
           </div>
           <p className="text-sm leading-relaxed max-w-md text-gray-400">

@@ -32,11 +32,11 @@ export default function Navbar() {
             } p-2`}
           >
             <Image
-              src="/logo.jpg"
+              src="/logo-financial-recovery-architect.png"
               alt="Taufeeq Essop - Financial Recovery Architect"
-              width={200}
-              height={60}
-              className="h-12 w-auto object-contain mix-blend-multiply"
+              width={220}
+              height={80}
+              className="h-12 w-auto object-contain"
               priority
             />
           </div>

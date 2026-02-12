@@ -40,7 +40,6 @@ export const SITE_CONFIG = {
       link: "/crisis-interceptor",
       color: "red",
       icon: "ShieldAlert",
-      logo: "/logos/crisis-interceptor.png",
     },
     {
       id: "alkimya",
