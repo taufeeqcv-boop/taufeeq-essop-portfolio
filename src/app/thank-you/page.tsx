@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle, Download, FileText } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/site-config";
+
+const title = "Thank You | Taufeeq Essop";
+const description = "Thank you for your submission.";
+const url = `${SITE_CONFIG.siteUrl}/thank-you`;
+const ogImage = { url: "/taufeeq-essop-profile.png", width: 1200, height: 630, alt: "Taufeeq Essop - Financial Recovery Architect" };
 
 export const metadata: Metadata = {
-  title: "Thank You | Taufeeq Essop",
-  description: "Thank you for your submission.",
+  title,
+  description,
+  openGraph: { title, description, url, siteName: "Taufeeq Essop", type: "website", images: [ogImage] },
+  twitter: { card: "summary_large_image", title, description },
+  alternates: { canonical: url },
 };
 
 export default function ThankYou() {

@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
+import { SITE_CONFIG } from "@/lib/site-config";
+
+const title = "About | Taufeeq Essop - Financial Recovery Architect";
+const description =
+  "Rooted in Tradition, Innovating for the Future. Legacy of Tuan Guru and Sayed Abdurrahman Motura. Al-Kimya Origin, Glengrove Lodge, financial and substance recovery.";
+const url = `${SITE_CONFIG.siteUrl}/about`;
+const ogImage = { url: "/taufeeq-essop-profile.png", width: 1200, height: 630, alt: "Taufeeq Essop - Financial Recovery Architect" };
 
 export const metadata: Metadata = {
-  title: "About | Taufeeq Essop - Financial Recovery Architect",
-  description:
-    "Rooted in Tradition, Innovating for the Future. Legacy of Tuan Guru and Sayed Abdurrahman Motura. Al-Kimya Origin, Glengrove Lodge, financial and substance recovery.",
+  title,
+  description,
+  openGraph: { title, description, url, siteName: "Taufeeq Essop", type: "website", images: [ogImage] },
+  twitter: { card: "summary_large_image", title, description },
+  alternates: { canonical: url },
 };
 
 export default function About() {

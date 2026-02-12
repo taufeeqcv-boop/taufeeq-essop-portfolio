@@ -15,10 +15,18 @@ import {
 } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/site-config";
 
+const title = "Services | Taufeeq Essop - Financial Recovery Architect";
+const description =
+  "Crisis Interceptor, Wealth Management, Recovery Coaching. What I do, how it helps, and how we can build together. Partnership and collaboration enquiries welcome.";
+const url = `${SITE_CONFIG.siteUrl}/services`;
+const ogImage = { url: "/taufeeq-essop-profile.png", width: 1200, height: 630, alt: "Taufeeq Essop - Financial Recovery Architect" };
+
 export const metadata: Metadata = {
-  title: "Services | Taufeeq Essop - Financial Recovery Architect",
-  description:
-    "Crisis Interceptor, Wealth Management, Recovery Coaching. What I do, how it helps, and how we can build together. Partnership and collaboration enquiries welcome.",
+  title,
+  description,
+  openGraph: { title, description, url, siteName: "Taufeeq Essop", type: "website", images: [ogImage] },
+  twitter: { card: "summary_large_image", title, description },
+  alternates: { canonical: url },
 };
 
 export default function Services() {

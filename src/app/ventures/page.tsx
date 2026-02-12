@@ -4,11 +4,20 @@ import Image from "next/image";
 import { SITE_CONFIG, type VentureWithMedia } from "@/lib/config";
 import { getIcon } from "@/lib/icons";
 import { ArrowUpRight } from "lucide-react";
+import { SITE_CONFIG as SITE } from "@/lib/site-config";
+
+const title = "Ventures | Taufeeq Essop - Financial Recovery Architect";
+const description =
+  "Al-Kimya Origin, Glengrove Lodge & Tours, Precision LGS, Al-Ameen Caps, Crisis Interceptor. What each venture does and how to get involved.";
+const url = `${SITE.siteUrl}/ventures`;
+const ogImage = { url: "/taufeeq-essop-profile.png", width: 1200, height: 630, alt: "Taufeeq Essop - Financial Recovery Architect" };
 
 export const metadata: Metadata = {
-  title: "Ventures | Taufeeq Essop - Financial Recovery Architect",
-  description:
-    "Al-Kimya Origin, Glengrove Lodge & Tours, Precision LGS, Al-Ameen Caps, Crisis Interceptor. What each venture does and how to get involved.",
+  title,
+  description,
+  openGraph: { title, description, url, siteName: "Taufeeq Essop", type: "website", images: [ogImage] },
+  twitter: { card: "summary_large_image", title, description },
+  alternates: { canonical: url },
 };
 
 const colorToBg: Record<(typeof SITE_CONFIG.ventures)[number]["color"], string> = {

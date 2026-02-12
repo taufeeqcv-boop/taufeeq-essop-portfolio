@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
+import { SITE_CONFIG } from "@/lib/site-config";
+
+const title = "PAIA Manual (Section 51) | Taufeeq Essop";
+const description = "Promotion of Access to Information Act - Section 51 Notice.";
+const url = `${SITE_CONFIG.siteUrl}/paia-manual`;
+const ogImage = { url: "/taufeeq-essop-profile.png", width: 1200, height: 630, alt: "Taufeeq Essop - Financial Recovery Architect" };
 
 export const metadata: Metadata = {
-  title: "PAIA Manual (Section 51) | Taufeeq Essop",
-  description: "Promotion of Access to Information Act - Section 51 Notice.",
+  title,
+  description,
+  openGraph: { title, description, url, siteName: "Taufeeq Essop", type: "website", images: [ogImage] },
+  twitter: { card: "summary_large_image", title, description },
+  alternates: { canonical: url },
 };
 
 export default function PAIAManual() {

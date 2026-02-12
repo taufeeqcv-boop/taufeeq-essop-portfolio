@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
+import { SITE_CONFIG } from "@/lib/site-config";
+
+const title = "Privacy Policy (POPIA) | Taufeeq Essop";
+const description = "Privacy Policy in terms of the Protection of Personal Information Act (POPIA).";
+const canonicalUrl = `${SITE_CONFIG.siteUrl}/privacy-policy`;
+const ogImage = { url: "/taufeeq-essop-profile.png", width: 1200, height: 630, alt: "Taufeeq Essop - Financial Recovery Architect" };
 
 export const metadata: Metadata = {
-  title: "Privacy Policy (POPIA) | Taufeeq Essop",
-  description: "Privacy Policy in terms of the Protection of Personal Information Act (POPIA).",
+  title,
+  description,
+  openGraph: { title, description, url: canonicalUrl, siteName: "Taufeeq Essop", type: "website", images: [ogImage] },
+  twitter: { card: "summary_large_image", title, description },
+  alternates: { canonical: canonicalUrl },
 };
 
 export default function Privacy() {

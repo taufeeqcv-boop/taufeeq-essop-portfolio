@@ -12,10 +12,18 @@ import {
 import { SITE_CONFIG } from "@/lib/site-config";
 import { SITE_CONFIG as APP_CONFIG } from "@/lib/config";
 
+const title = "For Recruiters | Taufeeq Essop - Financial Recovery Architect";
+const description =
+  "Open to roles in financial planning, recovery, advisory. BCom Tax, RE5, ACCSA. Sanlam & Old Mutual awards. Download CV, contact for opportunities.";
+const url = `${SITE_CONFIG.siteUrl}/for-recruiters`;
+const ogImage = { url: "/taufeeq-essop-profile.png", width: 1200, height: 630, alt: "Taufeeq Essop - Financial Recovery Architect" };
+
 export const metadata: Metadata = {
-  title: "For Recruiters | Taufeeq Essop - Financial Recovery Architect",
-  description:
-    "Open to roles in financial planning, recovery, advisory. BCom Tax, RE5, ACCSA. Sanlam & Old Mutual awards. Download CV, contact for opportunities.",
+  title,
+  description,
+  openGraph: { title, description, url, siteName: "Taufeeq Essop", type: "website", images: [ogImage] },
+  twitter: { card: "summary_large_image", title, description },
+  alternates: { canonical: url },
 };
 
 export default function ForRecruiters() {

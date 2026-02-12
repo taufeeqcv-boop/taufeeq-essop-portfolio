@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Download, ArrowLeft } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/site-config";
+
+const title = "Resume | Taufeeq Essop - Financial Recovery Architect";
+const description =
+  "Senior Financial Planner & Recovery Specialist. BCom Tax, RE5, ACCSA. Old Mutual, Sanlam, Glengrove Lodge.";
+const url = `${SITE_CONFIG.siteUrl}/resume`;
+const ogImage = { url: "/taufeeq-essop-profile.png", width: 1200, height: 630, alt: "Taufeeq Essop - Financial Recovery Architect" };
 
 export const metadata: Metadata = {
-  title: "Resume | Taufeeq Essop - Financial Recovery Architect",
-  description:
-    "Senior Financial Planner & Recovery Specialist. BCom Tax, RE5, ACCSA. Old Mutual, Sanlam, Glengrove Lodge.",
+  title,
+  description,
+  openGraph: { title, description, url, siteName: "Taufeeq Essop", type: "website", images: [ogImage] },
+  twitter: { card: "summary_large_image", title, description },
+  alternates: { canonical: url },
 };
 
 export default function Resume() {
