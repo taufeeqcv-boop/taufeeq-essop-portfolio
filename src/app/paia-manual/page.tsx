@@ -16,15 +16,15 @@ export const metadata: Metadata = {
 
 export default function PAIAManual() {
   return (
-    <div className="min-h-screen bg-slate-50 pt-32 pb-20">
+    <div className="min-h-screen bg-black pt-24 pb-20">
       <div className="max-w-3xl mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-8">
+        <h1 className="text-4xl font-serif font-bold text-white mb-8">
           PAIA Manual (Section 51 Notice)
         </h1>
 
-        <div className="prose prose-slate max-w-none space-y-8 text-gray-700">
+        <div className="prose prose-invert max-w-none space-y-8 text-zinc-400">
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               1. Access to Information
             </h2>
             <p>
@@ -34,7 +34,7 @@ export default function PAIAManual() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               2. Information Officer Details
             </h2>
             <ul className="list-none space-y-1">
@@ -44,7 +44,7 @@ export default function PAIAManual() {
                 <strong>Email:</strong>{" "}
                 <a
                   href="mailto:info@taufeeqessop.co.za"
-                  className="text-[#10b981] hover:underline"
+                  className="text-emerald-400 hover:underline"
                 >
                   info@taufeeqessop.co.za
                 </a>
@@ -53,7 +53,7 @@ export default function PAIAManual() {
                 <strong>Phone:</strong>{" "}
                 <a
                   href="tel:+27810487447"
-                  className="text-[#10b981] hover:underline"
+                  className="text-emerald-400 hover:underline"
                 >
                   +27 81 048 7447
                 </a>
@@ -62,7 +62,7 @@ export default function PAIAManual() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               3. Records Available Without Request
             </h2>
             <ul className="list-disc list-inside space-y-1">
@@ -73,7 +73,7 @@ export default function PAIAManual() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               4. Records Available on Request
             </h2>
             <ul className="list-disc list-inside space-y-1">
@@ -84,7 +84,7 @@ export default function PAIAManual() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               5. Request Procedure
             </h2>
             <p>

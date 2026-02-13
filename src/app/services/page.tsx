@@ -31,12 +31,12 @@ export const metadata: Metadata = {
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100/70 pt-32 pb-20">
+    <div className="min-h-screen bg-black pt-24 pb-20">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-4 tracking-tight">
+        <h1 className="text-4xl font-serif font-bold text-white mb-4 tracking-tight">
           Services
         </h1>
-        <p className="text-gray-600 mb-8 max-w-2xl leading-relaxed">
+        <p className="text-zinc-400 mb-8 max-w-2xl leading-relaxed">
           A clear separation between regulated financial advice and voluntary
           recovery coaching—so you know exactly what you&apos;re engaging with.
           Below: what I do, what I offer, how it helps, and how we can link and
@@ -44,21 +44,21 @@ export default function Services() {
         </p>
 
         {/* Services under Taufeeq Essop – umbrella */}
-        <section className="mb-10 p-6 rounded-2xl bg-emerald-50 border border-emerald-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-emerald-300">
-          <h2 className="text-lg font-bold text-[#0f172a] mb-2">
+        <section className="mb-10 p-6 rounded-2xl bg-[#18181b] border border-[#27272a] transition-all duration-300 hover:border-emerald-700/50">
+          <h2 className="text-lg font-bold text-white mb-2">
             Financial & Recovery Architect Services
           </h2>
-          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          <p className="text-sm text-zinc-400 leading-relaxed mb-4">
             Under my name I provide <strong>counseling and immediate crisis intervention</strong> for people affected by addiction (drugs and alcohol). We intervene, get everything necessary in place, help get them checked into a facility that works, and assist with <strong>financial recovery</strong> as well as <strong>aftercare services</strong>. In conjunction with <strong>Al-Kimya</strong> we can operate and deliver integrated solutions—we can work something out that fits your situation.
           </p>
         </section>
 
         {/* Giving back – free services */}
-        <section className="mb-10 p-6 rounded-2xl bg-amber-50 border border-amber-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-amber-300">
-          <h2 className="text-lg font-bold text-[#0f172a] mb-2">
+        <section className="mb-10 p-6 rounded-2xl bg-[#18181b] border border-amber-800/50 transition-all duration-300 hover:border-amber-700/50">
+          <h2 className="text-lg font-bold text-white mb-2">
             Giving Back – Free Financial & Recovery Support
           </h2>
-          <p className="text-sm text-gray-700 leading-relaxed">
+          <p className="text-sm text-zinc-400 leading-relaxed">
             I am currently offering <strong>financial and recovery services at no cost</strong> to help people and give back. If you are in need of crisis triage, sober budgeting support, or rehab-funding guidance and cannot afford to pay, reach out. We can see how to assist within the scope of what I provide (financial planning under FSP and voluntary recovery coaching).
           </p>
         </section>
@@ -100,7 +100,7 @@ export default function Services() {
 
         {/* Compliance firewall */}
         <section className="mb-12 space-y-6">
-          <div className="p-6 rounded-xl bg-[#0f172a] text-gray-200 border border-[#0f172a] shadow-md transition-all duration-300 hover:shadow-lg">
+          <div className="p-6 rounded-xl bg-[#18181b] text-zinc-400 border border-[#27272a] transition-all duration-300 hover:border-zinc-600">
             <h2 className="text-lg font-bold text-white mb-2">
               Financial Planning – Regulated by the FSCA
             </h2>
@@ -110,11 +110,11 @@ export default function Services() {
               {SITE_CONFIG.fspNumber}.
             </p>
           </div>
-          <div className="p-6 rounded-xl bg-amber-50/80 border border-amber-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-amber-300">
-            <h2 className="text-lg font-bold text-[#0f172a] mb-2">
+          <div className="p-6 rounded-xl bg-[#18181b] border border-amber-800/50 transition-all duration-300 hover:border-amber-700/50">
+            <h2 className="text-lg font-bold text-white mb-2">
               Recovery Coaching – Voluntary
             </h2>
-            <p className="text-sm text-gray-700">
+            <p className="text-sm text-zinc-400">
               Voluntary engagement for behavioral accountability. NOT clinical
               psychological treatment or medical advice.
             </p>
@@ -124,29 +124,29 @@ export default function Services() {
         {/* Service pillars with detail + how to get involved + links */}
         <div className="space-y-12">
           {/* Crisis Interceptor */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
+          <article className="border border-[#27272a] rounded-2xl p-8 bg-[#18181b] transition-all duration-300 hover:border-zinc-600 hover:-translate-y-0.5">
             <div className="flex items-center gap-3 mb-4">
               <ShieldAlert className="w-10 h-10 text-red-500" />
-              <h2 className="text-2xl font-serif font-bold text-[#0f172a]">
+              <h2 className="text-2xl font-serif font-bold text-white">
                 Crisis Interceptor
               </h2>
             </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-zinc-400 mb-4">
               Immediate crisis intervention for people addicted to drugs and alcohol: we intervene, get everything necessary in place, help get them checked into a facility that works, and assist with financial recovery and aftercare. Plus medical aid PMB advocacy, Section 6B tax strategy for rehab costs, and liquidity planning so you can fund recovery without destroying long-term solvency.
             </p>
             <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">What I provide</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Crisis intervention & placement:</strong> Intervene in addiction crises, get the necessary arrangements in place, and help get people into a facility that works.</li>
-                <li><strong>Financial recovery & aftercare:</strong> Assist with funding, payment plans, and aftercare so recovery is sustainable.</li>
-                <li><strong>Medical Aid PMB Advocacy:</strong> Fighting for Prescribed Minimum Benefits (PMB) so addiction treatment is covered where the law entitles you.</li>
-                <li><strong>Section 6B Tax Strategy:</strong> Structuring rehab and qualifying medical costs to maximize SARS medical tax credits.</li>
-                <li><strong>Liquidity Strategy:</strong> Asset triage—which assets to use first and how to service debt without collapsing the family balance sheet.</li>
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">What I provide</h3>
+              <ul className="list-disc list-inside text-zinc-400 space-y-2">
+                <li><strong className="text-zinc-300">Crisis intervention & placement:</strong> Intervene in addiction crises, get the necessary arrangements in place, and help get people into a facility that works.</li>
+                <li><strong className="text-zinc-300">Financial recovery & aftercare:</strong> Assist with funding, payment plans, and aftercare so recovery is sustainable.</li>
+                <li><strong className="text-zinc-300">Medical Aid PMB Advocacy:</strong> Fighting for Prescribed Minimum Benefits (PMB) so addiction treatment is covered where the law entitles you.</li>
+                <li><strong className="text-zinc-300">Section 6B Tax Strategy:</strong> Structuring rehab and qualifying medical costs to maximize SARS medical tax credits.</li>
+                <li><strong className="text-zinc-300">Liquidity Strategy:</strong> Asset triage—which assets to use first and how to service debt without collapsing the family balance sheet.</li>
               </ul>
             </div>
             <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">How it helps</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">How it helps</h3>
+              <p className="text-zinc-400 text-sm">
                 You get a clear, confidential roadmap: intervention, placement, what to claim, what to pay, and in what order. Families and executives can make decisions under pressure with structure instead of panic.
               </p>
             </div>
@@ -162,27 +162,27 @@ export default function Services() {
           </article>
 
           {/* Wealth Management */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
+          <article className="border border-[#27272a] rounded-2xl p-8 bg-[#18181b] transition-all duration-300 hover:border-zinc-600 hover:-translate-y-0.5">
             <div className="flex items-center gap-3 mb-4">
-              <TrendingUp className="w-10 h-10 text-blue-600" />
-              <h2 className="text-2xl font-serif font-bold text-[#0f172a]">
+              <TrendingUp className="w-10 h-10 text-blue-400" />
+              <h2 className="text-2xl font-serif font-bold text-white">
                 Wealth Management
               </h2>
             </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-zinc-400 mb-4">
               Long-term planning: estate, risk, and tax-efficient investment vehicles so your wealth supports your goals and your family.
             </p>
             <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">What I provide</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Estate Planning:</strong> Wills, trusts, and succession structures so assets pass the way you intend.</li>
-                <li><strong>Risk Planning:</strong> Insurance and portfolio management aligned with your risk tolerance and life stage.</li>
-                <li><strong>Investment Vehicles:</strong> Tax-efficient long-term wealth building and retirement planning.</li>
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">What I provide</h3>
+              <ul className="list-disc list-inside text-zinc-400 space-y-2">
+                <li><strong className="text-zinc-300">Estate Planning:</strong> Wills, trusts, and succession structures so assets pass the way you intend.</li>
+                <li><strong className="text-zinc-300">Risk Planning:</strong> Insurance and portfolio management aligned with your risk tolerance and life stage.</li>
+                <li><strong className="text-zinc-300">Investment Vehicles:</strong> Tax-efficient long-term wealth building and retirement planning.</li>
               </ul>
             </div>
             <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">How it helps</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">How it helps</h3>
+              <p className="text-zinc-400 text-sm">
                 You get a structured plan that protects what you have and grows it in line with your values—whether that&apos;s family security, recovery capital, or legacy.
               </p>
             </div>
@@ -198,27 +198,27 @@ export default function Services() {
           </article>
 
           {/* Recovery Coaching */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
+          <article className="border border-[#27272a] rounded-2xl p-8 bg-[#18181b] transition-all duration-300 hover:border-zinc-600 hover:-translate-y-0.5">
             <div className="flex items-center gap-3 mb-4">
-              <HeartHandshake className="w-10 h-10 text-[#10b981]" />
-              <h2 className="text-2xl font-serif font-bold text-[#0f172a]">
+              <HeartHandshake className="w-10 h-10 text-emerald-400" />
+              <h2 className="text-2xl font-serif font-bold text-white">
                 Recovery Coaching
               </h2>
             </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-zinc-400 mb-4">
               Voluntary coaching for sober budgeting, impulse control, and financial behavior—supportive wellness, not medical or clinical treatment.
             </p>
             <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">What I provide</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Sober Budget:</strong> A spending plan that prioritizes recovery capital (therapy, wellness) while servicing debt sustainably.</li>
-                <li><strong>Impulse Control:</strong> Behavioral accountability using evidence-based techniques (e.g. Motivational Interviewing).</li>
-                <li><strong>Forensic Audit:</strong> Identifying financial leakage and enabling patterns so you can redirect money toward recovery and stability.</li>
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">What I provide</h3>
+              <ul className="list-disc list-inside text-zinc-400 space-y-2">
+                <li><strong className="text-zinc-300">Sober Budget:</strong> A spending plan that prioritizes recovery capital (therapy, wellness) while servicing debt sustainably.</li>
+                <li><strong className="text-zinc-300">Impulse Control:</strong> Behavioral accountability using evidence-based techniques (e.g. Motivational Interviewing).</li>
+                <li><strong className="text-zinc-300">Forensic Audit:</strong> Identifying financial leakage and enabling patterns so you can redirect money toward recovery and stability.</li>
               </ul>
             </div>
             <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">How it helps</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">How it helps</h3>
+              <p className="text-zinc-400 text-sm">
                 You get a practical, confidential space to align money with recovery—fewer surprises, more control, and a plan that supports sobriety and long-term financial health.
               </p>
             </div>
@@ -234,19 +234,19 @@ export default function Services() {
           </article>
 
           {/* Glengrove Lodge – detox when available */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
+          <article className="border border-[#27272a] rounded-2xl p-8 bg-[#18181b] transition-all duration-300 hover:border-zinc-600 hover:-translate-y-0.5">
             <div className="flex items-center gap-3 mb-4">
-              <HeartHandshake className="w-10 h-10 text-amber-500" />
-              <h2 className="text-2xl font-serif font-bold text-[#0f172a]">
+              <HeartHandshake className="w-10 h-10 text-amber-400" />
+              <h2 className="text-2xl font-serif font-bold text-white">
                 Glengrove Lodge
               </h2>
             </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-zinc-400 mb-4">
               Hospitality and asset utilization at Glengrove. When availability allows, we can run a <strong>short inpatient detox-type treatment setting</strong>—a quick, supportive environment for stabilisation before longer-term treatment if needed.
             </p>
             <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">How to get involved</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">How to get involved</h3>
+              <p className="text-zinc-400 text-sm">
                 Enquiries for stays or detox availability: use the contact form or reach out directly. We can discuss dates, capacity, and what we can offer.
               </p>
             </div>
@@ -260,11 +260,11 @@ export default function Services() {
           </article>
 
           {/* Al-Kimya – partnership */}
-          <article className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-0.5 hover:border-gray-300">
-            <h2 className="text-xl font-serif font-bold text-[#0f172a] mb-4">
+          <article className="border border-[#27272a] rounded-2xl p-8 bg-[#18181b] transition-all duration-300 hover:border-zinc-600 hover:-translate-y-0.5">
+            <h2 className="text-xl font-serif font-bold text-white mb-4">
               In Conjunction With Al-Kimya
             </h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-zinc-400 mb-4">
               I work with <strong>Al-Kimya</strong> to deliver solutions that fit your context. We can operate together—whether that&apos;s integrated recovery and financial workflows, reporting, or something tailored. If you have a project or partnership in mind, we can work something out.
             </p>
             <Link
@@ -301,7 +301,7 @@ export default function Services() {
         </section>
 
         {/* How to link with me – build business networks */}
-        <section className="mt-12 p-8 rounded-2xl bg-[#0f172a] text-gray-200 border border-[#0f172a] shadow-xl shadow-slate-900/20 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-900/30">
+        <section className="mt-12 p-8 rounded-2xl bg-[#18181b] text-zinc-400 border border-[#27272a] transition-all duration-300 hover:border-zinc-600">
           <div className="flex items-center gap-3 mb-4">
             <Handshake className="w-10 h-10 text-[#10b981]" />
             <h2 className="text-2xl font-serif font-bold text-white">
@@ -314,7 +314,7 @@ export default function Services() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-[#0f172a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
+              className="inline-flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-zinc-200 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring focus:outline-none"
             >
               <Mail className="w-4 h-4" />
               Contact / Enquiry
@@ -343,14 +343,14 @@ export default function Services() {
               Resume / CV
             </Link>
           </div>
-          <p className="text-xs text-gray-400 mt-6 max-w-xl">
+          <p className="text-xs text-zinc-500 mt-6 max-w-xl">
             Whether you need one of my services or want to explore a partnership, referral arrangement, or joint venture—start with the contact form or LinkedIn. I respond to serious enquiries and collaboration ideas.
           </p>
         </section>
 
         {/* Disclaimer */}
-        <section className="mt-12 p-6 rounded-xl bg-slate-100 border border-slate-200 shadow-sm">
-          <p className="text-sm text-gray-600 flex items-start gap-2">
+        <section className="mt-12 p-6 rounded-xl bg-[#18181b] border border-[#27272a]">
+          <p className="text-sm text-zinc-400 flex items-start gap-2">
             <Scale className="w-4 h-4 shrink-0 mt-0.5" />
             <span>
               Wealth Management is delivered under the regulated FSP mandate.

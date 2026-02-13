@@ -29,6 +29,26 @@ export const SITE_CONFIG = {
       sub: "Attitude & Team Contribution",
       icon: "Heart",
     },
+    {
+      label: "Old Mutual Top Performer",
+      sub: "Financial Planning Excellence",
+      icon: "Trophy",
+    },
+    {
+      label: "ACCSA Member",
+      sub: "Addiction Counsellors & Recovery",
+      icon: "Target",
+    },
+    {
+      label: "RE5 & BCom Tax",
+      sub: "Regulatory & Academic Credentials",
+      icon: "GraduationCap",
+    },
+    {
+      label: "Crisis Interceptor",
+      sub: "Emergency Financial Triage",
+      icon: "Zap",
+    },
   ],
   ventures: [
     {

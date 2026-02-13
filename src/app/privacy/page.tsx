@@ -16,15 +16,15 @@ export const metadata: Metadata = {
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-slate-50 pt-32 pb-20">
+    <div className="min-h-screen bg-black pt-24 pb-20">
       <div className="max-w-3xl mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-8">
+        <h1 className="text-4xl font-serif font-bold text-white mb-8">
           Privacy Policy (POPIA)
         </h1>
 
-        <div className="prose prose-slate max-w-none space-y-8 text-gray-700">
+        <div className="prose prose-invert max-w-none space-y-8 text-zinc-400">
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               1. Introduction
             </h2>
             <p>
@@ -37,7 +37,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               2. Collection of Special Personal Information
             </h2>
             <p>
@@ -64,7 +64,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               3. Purpose of Processing
             </h2>
             <p>We use your data to:</p>
@@ -77,7 +77,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               4. Data Security & Storage
             </h2>
             <ul className="list-disc list-inside space-y-1">
@@ -98,7 +98,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               5. Sharing of Information
             </h2>
             <p>We do not sell your data. We only share data with:</p>
@@ -110,7 +110,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#0f172a] mb-2">
+            <h2 className="text-xl font-bold text-white mb-2">
               6. Your Rights
             </h2>
             <p>
@@ -118,7 +118,7 @@ export default function Privacy() {
               deletion of your personal data. Contact our Information Officer at{" "}
               <a
                 href="mailto:info@taufeeqessop.co.za"
-                className="text-[#10b981] hover:underline"
+                className="text-emerald-400 hover:underline"
               >
                 info@taufeeqessop.co.za
               </a>{" "}

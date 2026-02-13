@@ -8,6 +8,10 @@ import {
   Star,
   Heart,
   ShoppingBag,
+  Trophy,
+  Target,
+  Zap,
+  GraduationCap,
   type LucideIcon,
 } from "lucide-react";
 
@@ -21,6 +25,10 @@ export const IconMap: Record<string, LucideIcon> = {
   Star,
   Heart,
   ShoppingBag,
+  Trophy,
+  Target,
+  Zap,
+  GraduationCap,
 };
 
 export function getIcon(name: string): LucideIcon {

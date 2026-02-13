@@ -14,10 +14,12 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen p-4 md:p-6 lg:p-8 max-w-7xl mx-auto overflow-x-hidden grid-lines page-vignette relative">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 relative z-10">
-        {/* Hero: Top-Left, spans 2 cols, 2 rows */}
-        <div className="order-1 lg:col-span-2 lg:row-span-2 lg:col-start-1 lg:row-start-1">
-          <HeroCard />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 lg:grid-rows-[1fr_1fr_auto] lg:gap-y-0 relative z-10">
+        {/* Hero: Top-Left, spans 2 cols, 2 rows — stretches down to reach accolades */}
+        <div className="order-1 lg:col-span-2 lg:row-span-2 lg:col-start-1 lg:row-start-1 min-h-0 flex flex-col">
+          <div className="flex-1 min-h-0">
+            <HeroCard />
+          </div>
         </div>
 
         {/* Al-Kimya: Top-Right */}
@@ -84,8 +86,8 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* Accolades: Bottom row, spans 2 cols */}
-        <div className="order-6 lg:col-start-1 lg:col-span-2 lg:row-start-3">
+        {/* Accolades: Full-width bar aligned with far right */}
+        <div className="order-6 lg:col-start-1 lg:col-span-4 lg:row-start-3">
           <AccoladesCard />
         </div>
       </div>

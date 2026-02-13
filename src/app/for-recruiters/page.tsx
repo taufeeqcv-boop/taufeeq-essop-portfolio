@@ -31,19 +31,19 @@ export default function ForRecruiters() {
   const ventures = APP_CONFIG.ventures;
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-32 pb-20">
+    <div className="min-h-screen bg-black pt-24 pb-20">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-4">
+        <h1 className="text-4xl font-serif font-bold text-white mb-4">
           For Recruiters & Hiring Managers
         </h1>
-        <p className="text-gray-600 mb-10 max-w-2xl">
+        <p className="text-zinc-400 mb-10 max-w-2xl">
           I&apos;m open to being recruited for the right role—full-time, contract,
           or advisory—in financial planning, recovery, or ventures. Below: how I
           market myself, how I network, and how to reach me.
         </p>
 
         {/* One-line pitch */}
-        <section className="mb-10 p-6 rounded-2xl bg-[#0f172a] text-gray-200">
+        <section className="mb-10 p-6 rounded-2xl bg-[#18181b] border border-[#27272a] text-zinc-300">
           <p className="text-lg font-medium text-white">
             {profile.name} — {profile.title}. {profile.tagline} BCom Tax (UWC),
             RE5, ACCSA in progress. League of Champions (Sanlam), Old Mutual
@@ -53,13 +53,13 @@ export default function ForRecruiters() {
 
         {/* Marketing & networking strategy */}
         <section className="mb-12">
-          <h2 className="text-2xl font-serif font-bold text-[#0f172a] mb-6 flex items-center gap-2">
-            <Target className="w-7 h-7 text-[#10b981]" />
+          <h2 className="text-2xl font-serif font-bold text-white mb-6 flex items-center gap-2">
+            <Target className="w-7 h-7 text-emerald-400" />
             Marketing & Networking Strategy
           </h2>
-          <div className="space-y-6 text-gray-600">
+          <div className="space-y-6 text-zinc-400">
             <div>
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">
                 Positioning
               </h3>
               <p className="text-sm leading-relaxed">
@@ -72,7 +72,7 @@ export default function ForRecruiters() {
               </p>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">
                 Who I want to reach
               </h3>
               <p className="text-sm leading-relaxed">
@@ -85,7 +85,7 @@ export default function ForRecruiters() {
               </p>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">
                 How I stay visible
               </h3>
               <ul className="list-disc list-inside text-sm space-y-1">
@@ -99,26 +99,26 @@ export default function ForRecruiters() {
         </section>
 
         {/* What I'm open to */}
-        <section className="mb-12 p-6 rounded-2xl border border-gray-200 bg-white shadow-sm">
-          <h2 className="text-xl font-serif font-bold text-[#0f172a] mb-4 flex items-center gap-2">
-            <Briefcase className="w-6 h-6 text-[#10b981]" />
+        <section className="mb-12 p-6 rounded-2xl border border-[#27272a] bg-[#18181b]">
+          <h2 className="text-xl font-serif font-bold text-white mb-4 flex items-center gap-2">
+            <Briefcase className="w-6 h-6 text-emerald-400" />
             What I&apos;m Open To
           </h2>
-          <ul className="space-y-2 text-gray-600">
+          <ul className="space-y-2 text-zinc-400">
             <li className="flex items-start gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
               <span><strong>Full-time or contract roles</strong> in financial planning, wealth management, or recovery-related programmes.</span>
             </li>
             <li className="flex items-start gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
               <span><strong>Advisory or consulting</strong> for firms that serve families in crisis, rehab funding, or behavioral finance.</span>
             </li>
             <li className="flex items-start gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
               <span><strong>Partnerships and JVs</strong> with rehab facilities, software, or ventures (e.g. Al-Kimya) where my dual competency adds value.</span>
             </li>
             <li className="flex items-start gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
               <span><strong>Venturing to open a rehabilitation center</strong>—seeking spiritual, experienced partners (business, finance, clinical) who want to build something in the top tier in South Africa with a 90–99% recovery vision; Sadaqah Jariah for community and country.</span>
             </li>
           </ul>
@@ -126,11 +126,11 @@ export default function ForRecruiters() {
 
         {/* Ventures / proof points */}
         <section className="mb-12">
-          <h2 className="text-xl font-serif font-bold text-[#0f172a] mb-4 flex items-center gap-2">
-            <Users className="w-6 h-6 text-[#10b981]" />
+          <h2 className="text-xl font-serif font-bold text-white mb-4 flex items-center gap-2">
+            <Users className="w-6 h-6 text-emerald-400" />
             Ventures & Proof Points
           </h2>
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-sm text-zinc-400 mb-4">
             I operate Crisis Interceptor (crisis triage), Al-Kimya Recovery (wealth recovery), Precision LGS (construction), and Glengrove (hospitality; when available, short inpatient detox-type support). In conjunction with Al-Kimya we can deliver integrated solutions. This shows I can run operations, partner, and scale.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -138,7 +138,7 @@ export default function ForRecruiters() {
               <Link
                 key={v.id}
                 href={v.link}
-                className="px-3 py-1.5 rounded-lg bg-slate-200 text-[#0f172a] text-sm font-medium hover:bg-slate-300 transition-colors"
+                className="px-3 py-1.5 rounded-lg bg-[#27272a] text-zinc-200 text-sm font-medium hover:bg-zinc-600 transition-colors"
               >
                 {v.name}
               </Link>
@@ -147,7 +147,7 @@ export default function ForRecruiters() {
         </section>
 
         {/* CTA – links together */}
-        <section className="p-8 rounded-2xl bg-[#0f172a] text-gray-200">
+        <section className="p-8 rounded-2xl bg-[#18181b] border border-[#27272a] text-zinc-300">
           <h2 className="text-xl font-bold text-white mb-4">
             Reach Me – Links in One Place
           </h2>
@@ -159,14 +159,14 @@ export default function ForRecruiters() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/resume"
-              className="inline-flex items-center gap-2 bg-white text-[#0f172a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-zinc-200 transition-colors"
             >
               <FileText className="w-4 h-4" />
               View / Download CV
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#10b981] text-[#0f172a] px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-emerald-400 transition-colors"
+              className="inline-flex items-center gap-2 bg-emerald-500 text-black px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-emerald-400 transition-colors"
             >
               <Mail className="w-4 h-4" />
               Contact / Send brief

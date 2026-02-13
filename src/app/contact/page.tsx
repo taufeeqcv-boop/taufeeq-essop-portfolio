@@ -39,7 +39,7 @@ function ContactFormInner({ initialConcern }: { initialConcern: string }) {
           </p>
 
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-1">
               Name *
             </label>
             <input
@@ -47,12 +47,12 @@ function ContactFormInner({ initialConcern }: { initialConcern: string }) {
               type="text"
               name="name"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#10b981] focus:border-[#10b981] text-gray-900"
+              className="w-full px-4 py-3 rounded-lg border border-[#27272a] bg-[#18181b] focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-zinc-500"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-1">
               Email *
             </label>
             <input
@@ -60,24 +60,24 @@ function ContactFormInner({ initialConcern }: { initialConcern: string }) {
               type="email"
               name="email"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#10b981] focus:border-[#10b981] text-gray-900"
+              className="w-full px-4 py-3 rounded-lg border border-[#27272a] bg-[#18181b] focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-zinc-500"
             />
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="phone" className="block text-sm font-medium text-zinc-300 mb-1">
               Phone
             </label>
             <input
               id="phone"
               type="tel"
               name="phone"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#10b981] focus:border-[#10b981] text-gray-900"
+              className="w-full px-4 py-3 rounded-lg border border-[#27272a] bg-[#18181b] focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-zinc-500"
             />
           </div>
 
           <div>
-            <label htmlFor="concern" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="concern" className="block text-sm font-medium text-zinc-300 mb-1">
               Primary Concern *
             </label>
             <select
@@ -86,7 +86,7 @@ function ContactFormInner({ initialConcern }: { initialConcern: string }) {
               required
               value={primaryConcern}
               onChange={(e) => setPrimaryConcern(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#10b981] focus:border-[#10b981] text-gray-900"
+              className="w-full px-4 py-3 rounded-lg border border-[#27272a] bg-[#18181b] focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white"
             >
               <option value="">Select...</option>
               {CONCERN_OPTIONS.map((opt) => (
@@ -103,9 +103,9 @@ function ContactFormInner({ initialConcern }: { initialConcern: string }) {
               type="checkbox"
               name="consent"
               required
-              className="mt-1 h-4 w-4 rounded border-gray-300 text-[#10b981] focus:ring-[#10b981]"
+              className="mt-1 h-4 w-4 rounded border-[#27272a] bg-[#18181b] text-emerald-500 focus:ring-emerald-500"
             />
-            <label htmlFor="consent" className="text-sm text-gray-700">
+            <label htmlFor="consent" className="text-sm text-zinc-400">
               I consent to the processing of my personal information in terms
               of POPIA. I understand that health-related information is treated
               with strict confidentiality.
@@ -114,7 +114,7 @@ function ContactFormInner({ initialConcern }: { initialConcern: string }) {
 
           <button
             type="submit"
-            className="w-full bg-[#0f172a] text-white py-3 rounded-lg font-bold hover:bg-[#10b981] transition-colors"
+            className="w-full bg-emerald-600 text-white py-3 rounded-lg font-bold hover:bg-emerald-500 transition-colors"
           >
             Send Message
           </button>
@@ -128,17 +128,17 @@ function ContactForm() {
   const initialConcern = concernFromType(typeFromUrl);
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-32 pb-20">
+    <div className="min-h-screen bg-black pt-24 pb-20">
       <div className="max-w-xl mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-2">
+        <h1 className="text-4xl font-serif font-bold text-white mb-2">
           Let&apos;s Build Your Recovery Roadmap
         </h1>
-        <p className="text-gray-600 mb-8">
+        <p className="text-zinc-400 mb-8">
           Tell me your primary concern and I&apos;ll get back to you
           confidentially.
         </p>
 
-        <div className="mb-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-sm text-gray-700">
+        <div className="mb-6 p-4 rounded-lg bg-[#18181b] border border-amber-800/50 text-sm text-zinc-400">
           <strong>Note:</strong> Financial Planning services are provided under
           FSP License #{SITE_CONFIG.fspNumber}. Recovery Coaching services are
           supportive wellness interventions and do not constitute clinical
@@ -156,8 +156,8 @@ export default function Contact() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-slate-50 pt-32 pb-20 flex items-center justify-center">
-          <p className="text-gray-500">Loading...</p>
+        <div className="min-h-screen bg-black pt-24 pb-20 flex items-center justify-center">
+          <p className="text-zinc-500">Loading...</p>
         </div>
       }
     >

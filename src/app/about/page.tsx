@@ -17,22 +17,22 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-slate-50 pt-32 pb-20">
+    <div className="min-h-screen bg-black pt-24 pb-20">
       <div className="max-w-4xl mx-auto px-4">
-        <p className="text-[#10b981] font-semibold uppercase tracking-wider text-sm mb-2">
+        <p className="text-emerald-400 font-semibold uppercase tracking-wider text-sm mb-2">
           Legacy & Leadership
         </p>
-        <h1 className="text-4xl font-serif font-bold text-[#0f172a] mb-8">
+        <h1 className="text-4xl font-serif font-bold text-white mb-8">
           Rooted in Tradition, Innovating for the Future
         </h1>
 
         {/* About Me – main bio */}
         <section className="mb-12">
-          <h2 className="text-xl font-serif font-bold text-[#0f172a] mb-6 sr-only">
+          <h2 className="text-xl font-serif font-bold text-white mb-6 sr-only">
             About Me
           </h2>
-          <div className="prose prose-lg text-gray-600 max-w-none">
-            <p className="leading-relaxed mb-6">
+          <div className="prose prose-lg prose-invert max-w-none text-zinc-400">
+            <p className="leading-relaxed mb-6 text-zinc-300">
               I am Taufeeq Essop.
             </p>
             <p className="leading-relaxed mb-6">
@@ -62,18 +62,18 @@ export default function About() {
           </div>
         </section>
 
-        <section className="pt-12 border-t border-gray-200">
-          <h2 className="text-2xl font-serif font-bold text-[#0f172a] mb-6">
+        <section className="pt-12 border-t border-zinc-800">
+          <h2 className="text-2xl font-serif font-bold text-white mb-6">
             The Intersection of Finance and Human Resilience
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
+          <p className="text-zinc-400 leading-relaxed mb-4">
             For over 7 years, I operated in the high-stakes world of corporate
             finance—League of Champions at Sanlam, Grand Prize winner, and
             &ldquo;Best Sales Closer&rdquo; at Old Mutual. I was a
             &ldquo;Retention Architect,&rdquo; helping clients hold onto their
             assets.
           </p>
-          <p className="text-gray-600 leading-relaxed mb-4">
+          <p className="text-zinc-400 leading-relaxed mb-4">
             Today, I hold a dual-competency profile rare in South Africa: a
             Senior Financial Planner with a BCom in Tax (UWC), and ACCSA
             addiction counseling training. I bridge corporate awards and
@@ -83,11 +83,11 @@ export default function About() {
           </p>
         </section>
 
-        <section className="mt-16 pt-12 border-t border-gray-200">
-          <h2 className="text-2xl font-serif font-bold text-[#0f172a] mb-6">
+        <section className="mt-16 pt-12 border-t border-zinc-800">
+          <h2 className="text-2xl font-serif font-bold text-white mb-6">
             Lineage & Heritage
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
+          <p className="text-zinc-400 leading-relaxed mb-4">
             My maternal lineage traces to the Rakieps of Bo-Kaap: descendants
             of Tuan Guru (Imam Abdullah ibn Qadi Abdus Salam), Prince of
             Tidore, who founded the Auwal Masjid and preserved knowledge through
@@ -96,7 +96,7 @@ export default function About() {
             Madura, a warrior-saint whose karamat on Robben Island stands as a
             symbol of resilience and spiritual endurance.
           </p>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-zinc-400 leading-relaxed">
             I stand at the convergence of these two lines: the Architect and the
             Survivor—using the discipline of structure and the wisdom of
             endurance to serve families and individuals in their toughest
