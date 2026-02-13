@@ -158,7 +158,7 @@ export default function Ventures() {
                         alt=""
                         width={112}
                         height={112}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-fill"
                         unoptimized
                       />
                     ) : (

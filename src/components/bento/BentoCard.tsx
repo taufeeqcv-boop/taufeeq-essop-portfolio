@@ -89,7 +89,7 @@ export default function BentoCard({
             alt=""
             width={128}
             height={96}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-fill"
             onError={() => setLogoFailed(true)}
             unoptimized
           />
